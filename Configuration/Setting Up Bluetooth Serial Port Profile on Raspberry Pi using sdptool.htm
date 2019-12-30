@@ -1,0 +1,801 @@
+<!DOCTYPE html>
+<html class="uk-notouch" lang="en-US"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><script type="text/javascript">
+
+(function() {
+	if(typeof amzn_assoc_utils==="undefined"){amzn_assoc_utils={};}if(typeof amzn_assoc_utils.parse==="undefined"){amzn_assoc_utils.parse=(function(){var d,b,a={'"':'"',"\\":"\\","/":"/",b:"\b",f:"\f",n:"\n",r:"\r",t:"\t"},m,k=function(n){throw {name:"SyntaxError",message:n,at:d,text:m};},g=function(n){if(n&&n!==b){k("Expected '"+n+"' instead of '"+b+"'");}b=m.charAt(d);d+=1;return b;},f=function(){var o,n="";if(b==="-"){n="-";g("-");}while(b>="0"&&b<="9"){n+=b;g();}if(b==="."){n+=".";while(g()&&b>="0"&&b<="9"){n+=b;}}if(b==="e"||b==="E"){n+=b;g();if(b==="-"||b==="+"){n+=b;g();}while(b>="0"&&b<="9"){n+=b;g();}}o=+n;if(!isFinite(o)){k("Bad number");}else{return o;}},h=function(){var q,p,o="",n;if(b==='"'){while(g()){if(b==='"'){g();return o;}if(b==="\\"){g();if(b==="u"){n=0;for(p=0;p<4;p+=1){q=parseInt(g(),16);if(!isFinite(q)){break;}n=n*16+q;}o+=String.fromCharCode(n);}else{if(typeof a[b]==="string"){o+=a[b];}else{break;}}}else{o+=b;}}}k("Bad string");},j=function(){while(b&&b<=" "){g();}},c=function(){switch(b){case"t":g("t");g("r");g("u");g("e");return true;case"f":g("f");g("a");g("l");g("s");g("e");return false;case"n":g("n");g("u");g("l");g("l");return null;}k("Unexpected '"+b+"'");},l,i=function(){var n=[];if(b==="["){g("[");j();if(b==="]"){g("]");return n;}while(b){n.push(l());j();if(b==="]"){g("]");return n;}g(",");j();}}k("Bad array");},e=function(){var o,n={};if(b==="{"){g("{");j();if(b==="}"){g("}");return n;}while(b){o=h();j();g(":");if(Object.hasOwnProperty.call(n,o)){k('Duplicate key "'+o+'"');}n[o]=l();j();if(b==="}"){g("}");return n;}g(",");j();}}k("Bad object");};l=function(){j();switch(b){case"{":return e();case"[":return i();case'"':return h();case"-":return f();default:return b>="0"&&b<="9"?f():c();}};return function(p,o){var n;m=p;d=0;b=" ";n=l();j();if(b){k("Syntax error");}return n;};}());}if(typeof amzn_assoc_utils.stringify==="undefined"){amzn_assoc_utils.stringify=function(b){var a="";if(typeof JSON!=="undefined"){a=JSON.stringify(b);}return a;};}if(typeof amzn_assoc_utils.addCssRules==="undefined"){amzn_assoc_utils.addCssRules=function(g,n){var h=document.createElement("style"),m,e=0,k="";h.appendChild(document.createTextNode(""));document.head.appendChild(h);m=h.sheet;for(e=0,rl=n.length;e<rl;e++){var d=1,l=n[e],b=n[e][0],f="";if(Object.prototype.toString.call(l[1][0])==="[object Array]"){l=l[1];d=0;}for(var c=l.length;d<c;d++){var a=l[d];f+=a[0]+":"+a[1]+(a[2]?" !important":"")+";\n";}if(typeof g==="string"){m.insertRule(g+"{"+b+"{"+f+"}}",m.cssRules.length);}else{m.insertRule(b+"{"+f+"}",m.cssRules.length);}}};}window.trackingUtils=function(l,c,e,o,p,h,d,r,t,n,q){var g={},j=new RegExp("/(ref=[\\w]+)/?","i"),a="assocPayloadId",i=function(u){return u&&encodeURIComponent(u).replace(/&/g,"&amp;").replace(/"/g,"&quot;").replace(/</g,"&lt;").replace(/>/g,"&gt;");},m=(function(){var u=document.createElement("a");u.href=(window.location!==window.parent.location)?document.referrer:document.location;return u.protocol+"//"+u.hostname+((u.port===""||u.port==="80"||u.port==="443")?"":(":"+u.port))+(u.pathname.indexOf("/")!==0?("/"+u.pathname):u.pathname);}()),s=(function(){return i(m);}()),k=function(u,w,x,v){if(typeof x==="string"&&x!==""){if(u.search===""){u.search="?"+w+"="+x;}else{if(!u.search.match(new RegExp("[?&]"+w+"="))){u.search=u.search.replace(/\?/,"?"+w+"="+x+"&");}else{if(v){u.search=u.search.replace(new RegExp(w+"=([^&]*)"),w+"="+x);}}}}return u;},f=function(w,u,v){if(typeof v==="string"&&v!==""){if(!w.match(/\?/)){w=w+"?"+u+"="+v;}else{if(!w.match(u)){w=w.replace(/\?/,"?"+u+"="+v+"&");}}}return w;},b=function(v){var u=(typeof d!=="undefined")?d:0;if(typeof v!=="undefined"){u=v;}return u;};g.addRefUrls=function(z,A,v,u){var B=new RegExp("^http://.*(amazon|endless|myhabit|amazonwireless|javari|smallparts)\\.(com|ca|co\\.jp|de|fr|co\\.uk|cn|it|es)/.*","i"),w,y,x;for(x=0;x<z.length;x++){z[x].rel="nofollow";w=String(z[x].href);if(y=w.match(B)){z[x].href=g.addTrackingParameters(z[x],A,v,u);}}};g.addRefRefUrl=function(u){return k(u,"ref-refURL",s);};g.getRefRefUrl=function(){return s;};g.getRawRefUrl=function(){return m;};g.addSignature=function(v,u,w){return k(k(v,"sig",u),"sigts",w);};g.addLinkCode=function(v,u){return k(v,"linkCode",u);};g.addTrackingId=function(v,u){return k(v,"tag",u);};g.addLinkId=function(u,v){return k(u,"linkId",v);};g.addSubtag=function(u,v){return k(u,"ascsubtag",v);};g.addCreativeAsin=function(u,v){return k(k(u,"creativeASIN",v),"adId",v);};g.addAdType=function(v,u){return k(v,"adType",u);};g.addAdMode=function(u,v){return k(u,"adMode",v);};g.addAdFormat=function(v,u){return k(v,"adFormat",u);};g.addImpressionTimestamp=function(u,v){if(typeof v==="number"){v=v.toString();}return k(u,"impressionTimestamp",v);};g.convertToRedirectedUrl=function(u,x,v){var w=document.createElement("a");w.setAttribute("href",x);if(typeof v!=="undefined"){k(w,v,i(u.getAttribute("href")),true);}else{w.setAttribute("href",x+"/"+w.getAttribute("href"));}u.setAttribute("href",w.getAttribute("href"));return u;};g.getImpressionToken=function(){return h;};g.generateTransitId=function(){return g.getHashedImpressionToken();};g.getHashedImpressionToken=function(){var u=o.split("/");var v=u[u.length-2];return v;};g.getTransitId=function(){if(typeof assoc_session_storage!=="undefined"){var u=assoc_session_storage.get(a);return u;}return null;};g.getClickUrl=function(){return p;};g.addImpressionToken=function(v,w){var u=b(w);if(typeof h==="string"&&h!==""){k(v,"imprToken",h);if(typeof u!=="undefined"){k(v,"slotNum",u);}}return v;};g.addImpressionTokenStr=function(w,v){var u=b(v);if(typeof h==="string"&&h!==""){w=f(w,"imprToken",h);if(typeof u!=="undefined"){w=f(w,"slotNum",u);}}return w;};g.addTrackingParameters=function(A,B,z,E,x,u,y,w,v,F,D,C){return g.addSignature(g.addCreativeAsin(g.addLinkId(g.addTrackingId(g.addSubtag(g.addLinkCode(g.addRefRefUrl(g.addImpressionToken(g.addRefMarker(g.addAdType(g.addAdMode(g.addAdFormat(g.addImpressionTimestamp(A,C),D),F),v),x))),z),r),E),B),u),y,w);};g.addRefMarker=function(v,x){var w,u=false;if(typeof x==="undefined"){return v;}if(w=v.pathname.match(j)){v.pathname=v.pathname.replace(w[1],"ref="+x);}else{u=(v.pathname.charAt(v.pathname.length-1)==="/");v.pathname=v.pathname+(u?"":"/")+"ref="+x;}return v;};g.getRefMarker=function(u){var v;if(v=u.pathname.match(j)){return v[1].substr(4);}else{return undefined;}};g.getCurrentURL=function(){return(window.location!==window.parent.location)?document.referrer:document.location.href;};g.makeForesterCall=function(w){var u=undefined,v;if(typeof JSON!=="undefined"){v=JSON.stringify(w);}else{if(typeof amzn_assoc_utils!=="undefined"&&typeof amzn_assoc_utils.stringify==="function"){v=amzn_assoc_utils.stringify(w);}else{return;}}if(typeof o==="string"){u=o+"?assoc_payload="+encodeURIComponent(v);g.generateImage(u);}};g.recordImpression=function(w,u,z,x,B){z.linkCode=w;z.trackingId=u;z.refUrl=g.getCurrentURL();if(n||!t){g.makeForesterCall(z);}else{g.addABPFlag(z,g.makeForesterCall);}if(typeof x==="undefined"||!x){var y=(new Date()).getTime();var A=(typeof B!=="undefined")?B:"";var v=e+"?l="+w+"&t="+u+"&o="+l+"&cb="+y+A;g.generateImage(v);}};g.createAssocPayload=function(y,w,v,u){y.linkCode=w;y.trackingId=v;y.refUrl=u;var x="";if(typeof amzn_assoc_utils!=="undefined"&&typeof amzn_assoc_utils.stringify==="function"){x=amzn_assoc_utils.stringify(y);}return x;};g.recordAESImpression=function(w,u,x){if(typeof q==="string"){var z=g.createAssocPayload(x,w,u,g.getCurrentURL());var v=g.getHashedImpressionToken();var y=q+v+"/pixel?assoc_payload="+encodeURIComponent(z);g.generateImage(y);}};g.recordTransit=function(){if(!(g.getTransitId())||g.isUTMParamPresentInUrl(g.getCurrentURL())){assoc_session_storage.set(a,g.generateTransitId());}};g.isUTMParamPresentInUrl=function(v){var u=v.match(/utm_source=/i);return(u!==null);};g.addAAXClickUrls=function(v){var x,w,u;if(typeof v==="undefined"||typeof p==="undefined"){return;}for(w=0;w<v.length;w++){u=String(v[w].href);if(u.indexOf(p)<0){x=p+u;v[w].href=x;}}};g.addAAXClickUrl=function(u){if(typeof u==="undefined"||u.indexOf(p)===0){return u;}return p+u;};g.updateLinks=function(v,x){var w,u;if(typeof x!=="function"){return;}for(w=0;w<v.length;w++){u=String(v[w].href);v[w].href=x(u);}};g.elementInViewPort=function(u){var v=u.getBoundingClientRect(),w=(v.top>=0&&v.left>=0&&v.bottom<=(window.innerHeight||document.documentElement.clientHeight)&&v.right<=(window.innerWidth||document.documentElement.clientWidth));return{posX:v.left+window.pageXOffset,posY:v.top+window.pageYOffset,inViewPort:w};};g.recordViewability=function(z,y,v,w){if(typeof o==="string"){var x=g.createViewbilityPayload(z,y,v,w);var u=o+x+"&cb="+(new Date()).getTime();g.generateImage(u);}};g.recordAESViewability=function(B,A,v,w){if(typeof q==="string"){var x=g.createViewbilityPayload(B,A,v,w);var u=g.getHashedImpressionToken();var z=encodeURIComponent(x);var y=q+u+"/pixel/"+z+"&cb="+(new Date()).getTime();g.generateImage(y);}};g.createViewbilityPayload=function(z,y,v,x){var w={};if(typeof y!=="undefined"){w.above_the_fold=y;}if(typeof v!=="undefined"){w.topPos=v;}if(typeof x!=="undefined"){w.leftPos=x;}if(typeof z!=="undefined"){if(Object.keys(w).length===0){w.viewable=true;}w.slotNum=z;}var u="";if(typeof amzn_assoc_utils!=="undefined"&&typeof amzn_assoc_utils.stringify==="function"){u=amzn_assoc_utils.stringify({adViewability:[w]});}return u;};g.generateImage=function(u){if(typeof u!=="undefined"){(new Image()).src=u;}};g.addABPFlag=function(x,F){var z=false,y=2,w=document.body?document.body.appendChild(new Image()):new Image(),v=document.body?document.body.appendChild(new Image()):new Image(),C=false,A=false,u=Math.random()*11,E=t+"?ch=*&rn=*",D=function(H,G){if(y===0||G>1000){x.supplySideMetadata={ABPInstalled:y===0&&z};H(x);}else{setTimeout(function(){D(H,G*2);},G*2);}},B=function(){if(--y){return;}z=!C&&A;};w.style.display="none";v.style.display="none";w.onload=B;w.onerror=function(){C=true;B();};w.src=E.replace(/\*/,1).replace(/\*/,u);v.onload=B;v.onerror=function(){A=true;B();};v.src=E.replace(/\*/,2).replace(/\*/,u);D(F,250);};return g;};var assoc_session_storage=(function(){var a={};a.get=function(c){var d=null;if(typeof(window.sessionStorage)!=="undefined"){try{d=window.sessionStorage.getItem(c);}catch(b){}}return d;};a.set=function(c,d){if(typeof(window.sessionStorage)!=="undefined"){try{window.sessionStorage.setItem(c,d);}catch(b){}}};return a;}());window.elemTracker=function(b){var a={};a.trackElements=function(d,c){var f,e;if(typeof d!=="undefined"&&d.length>0&&typeof c==="function"){window.addEventListener("scroll",function(){for(f=0;f<d.length;f++){e=b.elementInViewPort(d[f]);if(e.inViewPort){c();}}},false);}};return a;};
+	var amznAutoTaggerMaker=function(h,v,B){var D={CA:"ca",CN:"cn",IN:"in",DE:"de",FR:"fr",GB:"co.uk",JP:"co.jp",US:"com"},j={CA:[],CN:[],IN:[],DE:["javari"],FR:["javari"],GB:["javari"],JP:["javari"],US:["smallparts","amazonwireless","endless","myhabit"]},F=(function(){var P=-1,O={};O.getNextSlotNum=function(){return ++P;};return O;}()),q,o,e=Math.max(document.body.scrollHeight,document.body.offsetHeight,document.documentElement.clientHeight,document.documentElement.scrollHeight,document.documentElement.offsetHeight),m=Math.max(document.body.scrollWidth,document.body.offsetWidth,document.documentElement.clientWidth,document.documentElement.scrollWidth,document.documentElement.offsetWidth),y={totalDocWidth:m,totalDocHeight:e,logType:"onetag_pageload",pageTitle:document.title},a="w50",J="w61",H="g12",C={},b=new RegExp("%3F"),w=new Object(),x=false,l="",s="",u=0,L=0,d=0,G=new RegExp("amzn.to"),r=new RegExp(h.redirectorEndPoint),E=["kdp.amazon.com"],N=[],I="assocPayloadId",c=function(P){var Q,O=false;for(Q=0;Q<E.length;Q++){if(P.match(E[Q])){O=true;break;}}return O;},p=function(O){return O.nextSibling&&O.nextSibling.tagName==="IMG"&&O.nextSibling.hasAttribute("src")&&(O.nextSibling.getAttribute("src").search(/ir-[a-z]{2}\.amazon-adsystem\.com/)>-1||O.nextSibling.getAttribute("src").search(/www\.assoc-amazon\.*/)>-1);},n=function(O){if(!O.href.match(r)){O.href=h.redirectorEndPoint+O.href;}},k=function(Y,ae){var Z=new RegExp("/(ref=[\\w]+)/?","i"),U,ad=false,P,S,T=false,X=Y.search.match(/\?tag=([^&]+)|&tag=([^&]+)|\?tag-value=([^&]+)|&tag-value=([^&]+)|\?tag_value=([^&]+)|&tag_value=([^&]+)|\?t=([^&]+)|&t=([^&]+)/),R=Y.search.match(/\?tag=|&tag=|\?tag-value=|&tag-value=|\?tag_value=|&tag_value=|\?t=|&t=/),O=Y.search.match(/(linkCode|link_code|lc)=([^&]+)/i),W=v.elementInViewPort(Y),ac={autoTagged:false,overwritten:false,geoRedirected:false,atf:W.inViewPort},Q=F.getNextSlotNum(),V={destinationURL:Y.href,slotNum:Q,atfInFirstLoad:W.inViewPort,posX:W.posX,posY:W.posY,logType:"onetag_textlink"},ab=p(Y),aa;ac.slotNum=Q;if(Y.search===""){Y.search="?imprToken="+v.getImpressionToken()+"&slotNum="+Q;}else{Y.search=Y.search.replace(/\?/,"?imprToken="+v.getImpressionToken()+"&slotNum="+Q+"&");}if(h.enableAutoTagging){ac.autoTagged=true;if(X){if(h.overwrite){for(S=1;S<9;S++){if(X[S]!=undefined){Y.search=Y.search.replace(X[S],ae);break;}}ac.overwritten=true;ad=true;}}else{if(R){Y.search=Y.search.replace(/tag=/,"tag="+ae);ad=true;}else{Y.search=Y.search.replace(/\?/,"?tag="+ae+"&");ad=true;}}}if(O&&typeof h.overridableLinkCodes[O[2]]!=="undefined"){T=true;}if(O&&!T){P=O[2];}else{P=ad?a:J;}if(O){V.oldLinkCode=O[2];Y.search=Y.search.replace(O[2],P);}else{Y.search=Y.search.replace(/\?/,"?linkCode="+P+"&");}if(ad){aa=ae;}else{if(typeof X!=="undefined"&&X instanceof Array&&X.length>=S+1&&typeof X[S]==="string"){aa=X[S];}else{aa="";}}if(C.shouldBeGeoRedirected()){ac.geoRedirected=true;n(Y);}if(Y.hasAttribute("data-amzn-asin")&&!Y.search.match("creativeASIN")){Y.search=Y.search.replace(/\?/,"?creativeASIN="+Y.getAttribute("data-amzn-asin")+"&");}if(C.shouldTrackTransit(h)){v.recordTransit();V[I]=v.getTransitId();}N.push({pos:W,slotNum:Q,linkCode:P,linkInfo:V,skipIRCall:ab,imprTag:aa});Y.href=v.addAAXClickUrl(Y.href);return ac;},A=function(O){if(O.href.match(b)){o=O.href.split(b);O.href=o[0]+"?"+decodeURIComponent(o[1]);}},t=function(P,O,S){var R,Q;for(R=0;R<P.length;R++){for(Q=0;Q<O.length;Q++){if(window.addEventListener){P[R].addEventListener(O[Q],S,false);}else{P[R].attachEvent("on"+O[Q],S);}}}},K=function(O,P){var Q=false;t([O],["touchstart"],function(){Q=false;});t([O],["touchmove"],function(){Q=true;});t([O],["click","touchend"],function(R){if(Q){return;}O.setAttribute("href",P);});t([O],["auxclick","contextmenu"],function(R){O.setAttribute("href",P);});t([O],["mouseup"],function(R){if(R.button===1||R.ctrlKey){O.setAttribute("href",P);}});},M=function(){var O="";for(i=0;i<h.itemRefs.length;i++){if(typeof h.itemRefs[i].type!=="undefined"&&h.itemRefs[i].type==="ASIN"&&typeof h.itemRefs[i].sourceLink!=="undefined"&&String(h.itemRefs[i].sourceLink).match(G)!==null&&typeof h.itemRefs[i].destinationLink!=="undefined"){w[h.itemRefs[i].sourceLink]=h.itemRefs[i].destinationLink;if(l!==""){O=",";}l=l+O+h.itemRefs[i].sourceLink;u++;}}},f=function(P,O){B.trackElements([P],function(){if(typeof O!==undefined&&O.slotNum!==undefined&&(O.viewed===undefined||!O.viewed)){v.recordViewability(O.slotNum);if(C.shouldInteractWithAES(h)){v.recordAESViewability(O.slotNum);}O.viewed=true;}});},g=function(O,P){K(O,O.getAttribute("href"));O.setAttribute("href",P);},z=function(){var Q,P,O;for(Q=0;Q<N.length;Q++){P=N[Q];O=P.pos;v.recordImpression(P.linkCode,P.imprTag,P.linkInfo,P.skipIRCall,P.slotNum);v.recordViewability(P.slotNum,O.inViewPort,O.posX,O.posY);if(C.shouldInteractWithAES(h)){v.recordAESImpression(P.linkCode,P.imprTag,P.linkInfo);v.recordAESViewability(P.slotNum,O.inViewPort,O.posX,O.posY);}}N=[];};if(h.locale!=undefined){q=h.locale;}else{q="US";}C.shouldBeGeoRedirected=function(){return h.enableGeoRedirection&&(h.region!==""&&h.region!==h.viewerCountry);};C.publisherCallBack=function(){window["amzn_assoc_client_cb_"+h.adUnitSlotNum]({type:"onload",data:{},widget:C});};C.decorateLinkElement=function(O){A(O);linkProperties=k(O,h.trackingId);f(O,linkProperties);return linkProperties;};C.shouldTrackTransit=function(O){return((typeof O.disableTransitTracking==="undefined")||!O.disableTransitTracking);};C.shouldInteractWithAES=function(O){return((typeof O.enableAESInteraction!=="undefined")&&O.enableAESInteraction);};C.tagLinks=function(af){var ah,ag,P,aa,aj,ac=[],al=0,X,Z,ai,ae,ak,O,Y,V=0,R=0,ab=0,Q=0,U=0,S=0,T,W,ad="";P=D[q];aa=j[q];aj=new RegExp("^(http|https)://(www|[\\w\\-\\.]+)?amazon\\.("+P+")/","i");if(aa){for(al=0;al<aa.length;al++){X=P;if(P=="co.jp"){X="co.jp|jp";}ac[al]=new RegExp("^(http|https)://(www\\.)?("+aa[al]+")\\.("+X+")/","i");}}Z=af.getElementsByTagName("a");if(!x){M();x=true;}for(ah=0;ah<Z.length;ah++){Y=undefined;ai=String(Z[ah].href);if(ae=ai.match(aj)&&!c(ai)){Y=C.decorateLinkElement(Z[ah]);g(Z[ah],ai);}else{if(h.isShortLinksSupported&&(ak=ai.match(G))!==null){L++;if(s!==""){ad=",";}s=s+ad+Z[ah].href;T=w[Z[ah].href];if(typeof T!=="undefined"){d++;Z[ah].setAttribute("href",T);Y=C.decorateLinkElement(Z[ah]);g(Z[ah],ai);}else{if(C.shouldBeGeoRedirected()){Y=C.decorateLinkElement(Z[ah]);g(Z[ah],ai);}}}else{for(O=0;O<ac.length;O++){if(ae=ai.match(ac[O])){C.decorateLinkElement(Z[ah]);g(Z[ah],ai);}}}}if(typeof Y!=="undefined"){if(Y.autoTagged){R++;}if(Y.overwritten){S++;}if(Y.geoRedirected){ab++;}if(Y.atf){Q++;}else{U++;}V++;}}y.numLinks=V;y.numAutoTaggedLinks=R;y.autoTaggingEnabled=h.enableAutoTagging;y.geoRedirectEnabled=h.enableGeoRedirection;y.disableTransitTracking=h.disableTransitTracking;y.numLinksATF=Q;y.numLinksBTF=U;y.shortLinksInLivePool=l;y.shortLinksInPage=s;y.shortLinksInLivePoolCount=u;y.shortLinksInPageCount=L;y.shortLinksMatchCount=d;if(C.shouldTrackTransit(h)){v.recordTransit();y[I]=v.getTransitId();}v.recordImpression(h.linkCode,h.trackingId,y);if(C.shouldInteractWithAES(h)){v.recordAESImpression(h.linkCode,h.trackingId,y);}t([window],["load"],z);};return C;};
+    var spec = {
+        trackingId : "scribles-20",
+        region : "US",
+        overwrite : false,
+        enableAutoTagging : false,
+        linkCode : "w49",
+        overridableLinkCodes :  {   "am1": ""   , "am2": ""   , "am3": ""   , "as1": ""   , "as2": ""   , "as3": ""   , "as4": ""   , "li1": ""   , "li2": ""   , "li3": ""   , "ll1": ""   , "ll2": ""   },
+        enableGeoRedirection : true,
+        redirectorEndPoint : "https://assoc-redirect.amazon.com/g/r/",
+        adUnitSlotNum : "0",
+        itemRefs : [{"type":"ASIN","id":"B072KNNF33","destUrl":{},"sourceType":{}}],
+        isShortLinksSupported : true,
+        viewerCountry : "TR",
+        disableTransitTracking : false,
+        enableAESInteraction : false
+    }, trackingUtils = window.trackingUtils(
+        "1",
+        "//fls-na.amazon-adsystem.com/1/associates-ads/1/OP/r/json",
+        "//ir-na.amazon-adsystem.com/e/ir",
+        "https://aax-us-east.amazon-adsystem.com/x/px/Qtwzs-TgfKttw9X8ArY93f4AAAFvWEkGXQEAAAFKARsCczo/", "https://aax-us-east.amazon-adsystem.com/x/c/Qtwzs-TgfKttw9X8ArY93f4AAAFvWEkGXQEAAAFKARsCczo/", "HWP12jvbcqfMlMLfM1svvw", undefined, undefined, undefined, true,
+        "https://assoc-na.associate-amazon.com/onetag/"
+    );
+
+    window.amznAutoTagger = amznAutoTaggerMaker(spec, trackingUtils, window.elemTracker(trackingUtils));
+    window.amznAutoTagger.tagLinks(document);
+    window.amznAutoTagger.publisherCallBack();
+}());
+
+ //# sourceURL=dynscript-0.js</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="profile" href="http://gmpg.org/xfn/11">
+<link rel="pingback" href="https://scribles.net/xmlrpc.php">
+
+<title>Setting Up Bluetooth Serial Port Profile on Raspberry Pi using sdptool</title>
+<link rel="dns-prefetch" href="https://s.w.org/">
+<link rel="alternate" type="application/rss+xml" title=" » Feed" href="https://scribles.net/feed/">
+<link rel="alternate" type="application/rss+xml" title=" » Comments Feed" href="https://scribles.net/comments/feed/">
+<link rel="alternate" type="application/rss+xml" title=" » Setting Up Bluetooth Serial Port Profile on Raspberry Pi using sdptool Comments Feed" href="https://scribles.net/setting-up-bluetooth-serial-port-profile-on-raspberry-pi/feed/">
+		<script async="" src="Setting%20Up%20Bluetooth%20Serial%20Port%20Profile%20on%20Raspberry%20Pi%20using%20sdptool_dosyalar/analytics.js"></script><script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/scribles.net\/wp-includes\/js\/wp-emoji-release.min.js?ver=5.3.2"}};
+			!function(e,a,t){var r,n,o,i,p=a.createElement("canvas"),s=p.getContext&&p.getContext("2d");function c(e,t){var a=String.fromCharCode;s.clearRect(0,0,p.width,p.height),s.fillText(a.apply(this,e),0,0);var r=p.toDataURL();return s.clearRect(0,0,p.width,p.height),s.fillText(a.apply(this,t),0,0),r===p.toDataURL()}function l(e){if(!s||!s.fillText)return!1;switch(s.textBaseline="top",s.font="600 32px Arial",e){case"flag":return!c([127987,65039,8205,9895,65039],[127987,65039,8203,9895,65039])&&(!c([55356,56826,55356,56819],[55356,56826,8203,55356,56819])&&!c([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]));case"emoji":return!c([55357,56424,55356,57342,8205,55358,56605,8205,55357,56424,55356,57340],[55357,56424,55356,57342,8203,55358,56605,8203,55357,56424,55356,57340])}return!1}function d(e){var t=a.createElement("script");t.src=e,t.defer=t.type="text/javascript",a.getElementsByTagName("head")[0].appendChild(t)}for(i=Array("flag","emoji"),t.supports={everything:!0,everythingExceptFlag:!0},o=0;o<i.length;o++)t.supports[i[o]]=l(i[o]),t.supports.everything=t.supports.everything&&t.supports[i[o]],"flag"!==i[o]&&(t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&t.supports[i[o]]);t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&!t.supports.flag,t.DOMReady=!1,t.readyCallback=function(){t.DOMReady=!0},t.supports.everything||(n=function(){t.readyCallback()},a.addEventListener?(a.addEventListener("DOMContentLoaded",n,!1),e.addEventListener("load",n,!1)):(e.attachEvent("onload",n),a.attachEvent("onreadystatechange",function(){"complete"===a.readyState&&t.readyCallback()})),(r=t.source||{}).concatemoji?d(r.concatemoji):r.wpemoji&&r.twemoji&&(d(r.twemoji),d(r.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script><script src="Setting%20Up%20Bluetooth%20Serial%20Port%20Profile%20on%20Raspberry%20Pi%20using%20sdptool_dosyalar/wp-emoji-release.js" type="text/javascript" defer="defer"></script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	<link rel="stylesheet" id="crayon-css" href="Setting%20Up%20Bluetooth%20Serial%20Port%20Profile%20on%20Raspberry%20Pi%20using%20sdptool_dosyalar/crayon.css" type="text/css" media="all">
+<link rel="stylesheet" id="crayon-theme-1c-zapros-css" href="Setting%20Up%20Bluetooth%20Serial%20Port%20Profile%20on%20Raspberry%20Pi%20using%20sdptool_dosyalar/1c-zapros.css" type="text/css" media="all">
+<link rel="stylesheet" id="crayon-font-consolas-css" href="Setting%20Up%20Bluetooth%20Serial%20Port%20Profile%20on%20Raspberry%20Pi%20using%20sdptool_dosyalar/consolas.css" type="text/css" media="all">
+<link rel="stylesheet" id="wp-block-library-css" href="Setting%20Up%20Bluetooth%20Serial%20Port%20Profile%20on%20Raspberry%20Pi%20using%20sdptool_dosyalar/style_002.css" type="text/css" media="all">
+<link rel="stylesheet" id="uikit-css" href="Setting%20Up%20Bluetooth%20Serial%20Port%20Profile%20on%20Raspberry%20Pi%20using%20sdptool_dosyalar/uikit.css" type="text/css" media="all">
+<link rel="stylesheet" id="ultra_framework-custom-fonts-css" href="Setting%20Up%20Bluetooth%20Serial%20Port%20Profile%20on%20Raspberry%20Pi%20using%20sdptool_dosyalar/custom-fonts.css" type="text/css" media="all">
+<link rel="stylesheet" id="ultra-framework-style-css" href="Setting%20Up%20Bluetooth%20Serial%20Port%20Profile%20on%20Raspberry%20Pi%20using%20sdptool_dosyalar/style.css" type="text/css" media="all">
+<script type="text/javascript" src="Setting%20Up%20Bluetooth%20Serial%20Port%20Profile%20on%20Raspberry%20Pi%20using%20sdptool_dosyalar/jquery.js"></script>
+<script type="text/javascript" src="Setting%20Up%20Bluetooth%20Serial%20Port%20Profile%20on%20Raspberry%20Pi%20using%20sdptool_dosyalar/jquery-migrate.js"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var CrayonSyntaxSettings = {"version":"_2.7.2_beta","is_admin":"0","ajaxurl":"https:\/\/scribles.net\/wp-admin\/admin-ajax.php","prefix":"crayon-","setting":"crayon-setting","selected":"crayon-setting-selected","changed":"crayon-setting-changed","special":"crayon-setting-special","orig_value":"data-orig-value","debug":""};
+var CrayonSyntaxStrings = {"copy":"Press %s to Copy, %s to Paste","minimize":"Click To Expand Code"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="Setting%20Up%20Bluetooth%20Serial%20Port%20Profile%20on%20Raspberry%20Pi%20using%20sdptool_dosyalar/crayon.js"></script>
+<link rel="https://api.w.org/" href="https://scribles.net/wp-json/">
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://scribles.net/xmlrpc.php?rsd">
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://scribles.net/wp-includes/wlwmanifest.xml"> 
+<link rel="prev" title="Creating BLE GATT Server (UART Service) on Raspberry Pi" href="https://scribles.net/creating-ble-gatt-server-uart-service-on-raspberry-pi/">
+<link rel="next" title="Setting Up Bluetooth Serial Port Profile on Raspberry Pi using D-Bus API" href="https://scribles.net/setting-up-bluetooth-serial-port-profile-on-raspberry-pi-using-d-bus-api/">
+<meta name="generator" content="WordPress 5.3.2">
+<link rel="canonical" href="https://scribles.net/setting-up-bluetooth-serial-port-profile-on-raspberry-pi/">
+<link rel="shortlink" href="https://scribles.net/?p=3366">
+<link rel="alternate" type="application/json+oembed" href="https://scribles.net/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fscribles.net%2Fsetting-up-bluetooth-serial-port-profile-on-raspberry-pi%2F">
+<link rel="alternate" type="text/xml+oembed" href="https://scribles.net/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fscribles.net%2Fsetting-up-bluetooth-serial-port-profile-on-raspberry-pi%2F&amp;format=xml">
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-100450521-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+<script async="" src="Setting%20Up%20Bluetooth%20Serial%20Port%20Profile%20on%20Raspberry%20Pi%20using%20sdptool_dosyalar/adsbygoogle.js"></script>
+<script>
+  (adsbygoogle = window.adsbygoogle || []).push({
+    google_ad_client: "ca-pub-5165083875877654",
+    enable_page_level_ads: true
+  });
+</script><style type="text/css" id="custom-background-css">
+body.custom-background { background-color: #f4f4f4; }
+</style>
+	<link rel="icon" href="https://scribles.net/wp-content/uploads/2017/05/cropped-SCRIBLES_title-1-32x32.png" sizes="32x32">
+<link rel="icon" href="https://scribles.net/wp-content/uploads/2017/05/cropped-SCRIBLES_title-1-192x192.png" sizes="192x192">
+<link rel="apple-touch-icon-precomposed" href="https://scribles.net/wp-content/uploads/2017/05/cropped-SCRIBLES_title-1-180x180.png">
+<meta name="msapplication-TileImage" content="https://scribles.net/wp-content/uploads/2017/05/cropped-SCRIBLES_title-1-270x270.png">
+</head>
+
+<body class="post-template-default single single-post postid-3366 single-format-standard custom-background wp-custom-logo group-blog">
+<div id="page" class="site">
+	<a class="skip-link screen-reader-text" href="#main">Skip to content</a>
+
+	<header id="masthead" class="site-header" role="banner">
+		
+		
+<nav class="main-navbar uk-navbar uk-navbar-attached">
+	<div class="uk-container uk-container-center">
+		
+        		
+		<div class="uk-navbar-flip uk-visible-small">
+			<a href="#offcanvas-menu" class="uk-navbar-toggle" data-uk-offcanvas=""></a>
+		</div>
+	</div>
+		
+		
+	<div id="offcanvas-menu" class="uk-offcanvas">
+		<div class="uk-offcanvas-bar uk-offcanvas-bar-flip">
+					</div>
+    </div>
+</nav>		
+		<div class="site-branding uk-text-center uk-margin-large">
+			
+			<a href="https://scribles.net/" class="custom-logo-link" rel="home"><img src="Setting%20Up%20Bluetooth%20Serial%20Port%20Profile%20on%20Raspberry%20Pi%20using%20sdptool_dosyalar/cropped-cropped-SCRIBLES_title.png" class="custom-logo" alt="" width="240" height="67"></a>			
+							<p class="site-title"><a href="https://scribles.net/" rel="home"></a></p>
+					</div><!-- .site-branding -->
+
+	</header><!-- #masthead -->
+
+	<div id="content" class="site-content uk-container uk-container-center uk-margin-top uk-margin-large-bottom">
+		<div class="uk-grid" data-uk-grid-margin="">
+
+	<div id="primary" class="content-area uk-width-medium-3-4 uk-row-first">
+		<main id="main" class="site-main" role="main">
+
+		
+<article id="post-3366" class="uk-article uk-margin-large-bottom post-3366 post type-post status-publish format-standard hentry category-how-to tag-bluetooth tag-bluez tag-minicom tag-raspberry-pi tag-serial-communication tag-spp tag-uart">
+
+	<header class="entry-header uk-margin">
+		
+		<h1 class="entry-title uk-article-title uk-text-center-small">Setting Up Bluetooth Serial Port Profile on Raspberry Pi using sdptool</h1>		
+       <div class="entry-meta uk-article-meta uk-text-center-small">
+			<span class="posted-on">Posted on <a href="https://scribles.net/setting-up-bluetooth-serial-port-profile-on-raspberry-pi/" rel="bookmark"><time class="entry-date published updated" datetime="2019-03-14T23:56:25-05:00">March 14, 2019</time></a></span><span class="byline"> by <span class="author vcard"><a class="url fn n" href="https://scribles.net/author/max/">max</a></span></span>		</div><!-- .entry-meta -->
+		
+    </header><!-- .entry-header -->
+	
+		
+	
+	<div class="entry-content uk-margin">
+		<p>This post shows steps to set up Bluetooth Serial Port Profile (or SPP)<a href="#Ref01">[1] </a>on Raspberry Pi.</p>
+<p>The goal is to establish SPP connection between Raspberry Pi 3 and 
+Android phone, then send/receive text using serial terminal applications
+ on both ends.</p>
+<p>SPP is not available by default. There are two options to enable it 
+in BlueZ (which is the default Bluetooth stack in Linux). This post 
+shows steps for the 1st option (sdptool).</p>
+<ol>
+<li>sdptool</li>
+<li>D-bus API (please see&nbsp;<a href="https://scribles.net/setting-up-bluetooth-serial-port-profile-on-raspberry-pi-using-d-bus-api/" target="_blank" rel="noopener noreferrer">this post</a> for this option)</li>
+</ol>
+<p>&nbsp;</p>
+<p><a name="Prerequisites"></a><strong>Prerequisites</strong>&nbsp;(parentheses indicate my environment)</p>
+<ul>
+<li>Raspberry Pi board (<a href="https://amzn.to/2rlA0Tz" target="_blank" rel="noopener noreferrer">Raspberry Pi3</a> running Raspbian Stretch)</li>
+<li>Android phone (<a href="https://www.amazon.com/gp/product/B072KNNF33/ref=as_li_qf_asin_il_tl?ie=UTF8&amp;tag=scribles-20&amp;creative=9325&amp;linkCode=as2&amp;creativeASIN=B072KNNF33&amp;linkId=0848aacc0c1d0c6fcf4e77aa1e0ea404" target="_blank" rel="noopener noreferrer" data-amzn-asin="B072KNNF33">Samsung Galaxy S7</a>)</li>
+</ul>
+<p>&nbsp;</p>
+<p><a name="Steps"></a><strong>Steps</strong><br>
+<a name="Step01"></a><strong>1. Installation<br>
+</strong>1-1. Install a serial terminal application on Raspberry Pi. In this post, I’ll use minicom<a href="#Ref02">[2]</a>.</p><!-- Crayon Syntax Highlighter v_2.7.2_beta -->
+
+		<div id="crayon-5e0a501fa66b3097130365" class="crayon-syntax crayon-theme-1c-zapros crayon-font-consolas crayon-os-pc print-yes notranslate crayon-wrapped" data-settings=" minimize scroll-always wrap" style="font-size: 12px !important; line-height: 20px !important; height: auto;">
+		
+			<div class="crayon-plain-wrap"></div>
+			<div class="crayon-main" style="position: relative; z-index: 1;">
+				<table class="crayon-table" style="">
+					<tbody><tr class="crayon-row">
+				<td class="crayon-nums " data-settings="show">
+					<div class="crayon-nums-content" style="font-size: 12px !important; line-height: 20px !important;"><div class="crayon-num" data-line="crayon-5e0a501fa66b3097130365-1" style="height: 20px;">1</div></div>
+				</td>
+						<td class="crayon-code"><div class="crayon-pre" style="font-size: 12px !important; line-height: 20px !important; -moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4;"><div class="crayon-line" id="crayon-5e0a501fa66b3097130365-1"><span class="crayon-e">sudo </span><span class="crayon-v">apt</span><span class="crayon-o">-</span><span class="crayon-e">get </span><span class="crayon-e">install </span><span class="crayon-v">minicom</span><span class="crayon-h"> </span><span class="crayon-o">-</span><span class="crayon-v">y</span></div></div></td>
+					</tr>
+				</tbody></table>
+			</div>
+		</div>
+<!-- [Format Time: 0.0009 seconds] -->
+<p>&nbsp;</p>
+<p><strong>2. Enable SPP on Raspberry Pi</strong><br>
+In order to use SPP, Bluetooth service needs to be restarted with ‘compatibility’ flag<a href="#Ref03">[3]</a>.</p>
+<p>2-1. Open Bluetooth service configuration file.</p><!-- Crayon Syntax Highlighter v_2.7.2_beta -->
+
+		<div id="crayon-5e0a501fa66c1585359130" class="crayon-syntax crayon-theme-1c-zapros crayon-font-consolas crayon-os-pc print-yes notranslate crayon-wrapped" data-settings=" minimize scroll-always wrap" style="font-size: 12px !important; line-height: 20px !important; height: auto;">
+		
+			<div class="crayon-plain-wrap"></div>
+			<div class="crayon-main" style="position: relative; z-index: 1;">
+				<table class="crayon-table" style="">
+					<tbody><tr class="crayon-row">
+				<td class="crayon-nums " data-settings="show">
+					<div class="crayon-nums-content" style="font-size: 12px !important; line-height: 20px !important;"><div class="crayon-num" data-line="crayon-5e0a501fa66c1585359130-1" style="height: 20px;">1</div></div>
+				</td>
+						<td class="crayon-code"><div class="crayon-pre" style="font-size: 12px !important; line-height: 20px !important; -moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4;"><div class="crayon-line" id="crayon-5e0a501fa66c1585359130-1"><span class="crayon-e">sudo </span><span class="crayon-v">nano</span><span class="crayon-h"> </span><span class="crayon-o">/</span><span class="crayon-v">etc</span><span class="crayon-o">/</span><span class="crayon-v">systemd</span><span class="crayon-o">/</span><span class="crayon-v">system</span><span class="crayon-o">/</span><span class="crayon-v">dbus</span><span class="crayon-o">-</span><span class="crayon-v">org</span><span class="crayon-sy">.</span><span class="crayon-v">bluez</span><span class="crayon-sy">.</span><span class="crayon-v">service</span></div></div></td>
+					</tr>
+				</tbody></table>
+			</div>
+		</div>
+<!-- [Format Time: 0.0002 seconds] -->
+<p>2-2. Look for a line starts with “ExecStart” and add compatibility flag ‘-C’ at the end of the line.</p><!-- Crayon Syntax Highlighter v_2.7.2_beta -->
+
+		<div id="crayon-5e0a501fa66c6052226489" class="crayon-syntax crayon-theme-1c-zapros crayon-font-consolas crayon-os-pc print-yes notranslate crayon-wrapped" data-settings=" minimize scroll-always wrap" style="font-size: 12px !important; line-height: 20px !important; height: auto;">
+		
+			<div class="crayon-plain-wrap"></div>
+			<div class="crayon-main" style="position: relative; z-index: 1;">
+				<table class="crayon-table" style="">
+					<tbody><tr class="crayon-row">
+				<td class="crayon-nums " data-settings="show">
+					<div class="crayon-nums-content" style="font-size: 12px !important; line-height: 20px !important;"><div class="crayon-num" data-line="crayon-5e0a501fa66c6052226489-1" style="height: 20px;">1</div></div>
+				</td>
+						<td class="crayon-code"><div class="crayon-pre" style="font-size: 12px !important; line-height: 20px !important; -moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4;"><div class="crayon-line" id="crayon-5e0a501fa66c6052226489-1"><span class="crayon-v">ExecStart</span><span class="crayon-o">=</span><span class="crayon-o">/</span><span class="crayon-v">usr</span><span class="crayon-o">/</span><span class="crayon-v">lib</span><span class="crayon-o">/</span><span class="crayon-v">bluetooth</span><span class="crayon-o">/</span><span class="crayon-v">bluetoothd</span><span class="crayon-h"> </span><span class="crayon-o">-</span><span class="crayon-v">C</span></div></div></td>
+					</tr>
+				</tbody></table>
+			</div>
+		</div>
+<!-- [Format Time: 0.0001 seconds] -->
+<p>2-3. Add a line below immediately after “ExecStart” line, then save and close the file.</p><!-- Crayon Syntax Highlighter v_2.7.2_beta -->
+
+		<div id="crayon-5e0a501fa66ca582772573" class="crayon-syntax crayon-theme-1c-zapros crayon-font-consolas crayon-os-pc print-yes notranslate crayon-wrapped" data-settings=" minimize scroll-always wrap" style="font-size: 12px !important; line-height: 20px !important; height: auto;">
+		
+			<div class="crayon-plain-wrap"></div>
+			<div class="crayon-main" style="position: relative; z-index: 1;">
+				<table class="crayon-table" style="">
+					<tbody><tr class="crayon-row">
+				<td class="crayon-nums " data-settings="show">
+					<div class="crayon-nums-content" style="font-size: 12px !important; line-height: 20px !important;"><div class="crayon-num" data-line="crayon-5e0a501fa66ca582772573-1" style="height: 20px;">1</div></div>
+				</td>
+						<td class="crayon-code"><div class="crayon-pre" style="font-size: 12px !important; line-height: 20px !important; -moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4;"><div class="crayon-line" id="crayon-5e0a501fa66ca582772573-1"><span class="crayon-v">ExecStartPost</span><span class="crayon-o">=</span><span class="crayon-o">/</span><span class="crayon-v">usr</span><span class="crayon-o">/</span><span class="crayon-v">bin</span><span class="crayon-o">/</span><span class="crayon-e">sdptool </span><span class="crayon-e">add </span><span class="crayon-v">SP</span></div></div></td>
+					</tr>
+				</tbody></table>
+			</div>
+		</div>
+<!-- [Format Time: 0.0001 seconds] -->
+<p>2-4. Reload the configuration file.</p><!-- Crayon Syntax Highlighter v_2.7.2_beta -->
+
+		<div id="crayon-5e0a501fa66cd369628196" class="crayon-syntax crayon-theme-1c-zapros crayon-font-consolas crayon-os-pc print-yes notranslate crayon-wrapped" data-settings=" minimize scroll-always wrap" style="font-size: 12px !important; line-height: 20px !important; height: auto;">
+		
+			<div class="crayon-plain-wrap"></div>
+			<div class="crayon-main" style="position: relative; z-index: 1;">
+				<table class="crayon-table" style="">
+					<tbody><tr class="crayon-row">
+				<td class="crayon-nums " data-settings="show">
+					<div class="crayon-nums-content" style="font-size: 12px !important; line-height: 20px !important;"><div class="crayon-num" data-line="crayon-5e0a501fa66cd369628196-1" style="height: 20px;">1</div></div>
+				</td>
+						<td class="crayon-code"><div class="crayon-pre" style="font-size: 12px !important; line-height: 20px !important; -moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4;"><div class="crayon-line" id="crayon-5e0a501fa66cd369628196-1"><span class="crayon-e">sudo </span><span class="crayon-e">systemctl </span><span class="crayon-v">daemon</span><span class="crayon-o">-</span><span class="crayon-v">reload</span></div></div></td>
+					</tr>
+				</tbody></table>
+			</div>
+		</div>
+<!-- [Format Time: 0.0001 seconds] -->
+<p>2-5. Restart the service.</p><!-- Crayon Syntax Highlighter v_2.7.2_beta -->
+
+		<div id="crayon-5e0a501fa66d1245903478" class="crayon-syntax crayon-theme-1c-zapros crayon-font-consolas crayon-os-pc print-yes notranslate crayon-wrapped" data-settings=" minimize scroll-always wrap" style="font-size: 12px !important; line-height: 20px !important; height: auto;">
+		
+			<div class="crayon-plain-wrap"></div>
+			<div class="crayon-main" style="position: relative; z-index: 1;">
+				<table class="crayon-table" style="">
+					<tbody><tr class="crayon-row">
+				<td class="crayon-nums " data-settings="show">
+					<div class="crayon-nums-content" style="font-size: 12px !important; line-height: 20px !important;"><div class="crayon-num" data-line="crayon-5e0a501fa66d1245903478-1" style="height: 20px;">1</div></div>
+				</td>
+						<td class="crayon-code"><div class="crayon-pre" style="font-size: 12px !important; line-height: 20px !important; -moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4;"><div class="crayon-line" id="crayon-5e0a501fa66d1245903478-1"><span class="crayon-e">sudo </span><span class="crayon-e">systemctl </span><span class="crayon-e">restart </span><span class="crayon-v">bluetooth</span><span class="crayon-sy">.</span><span class="crayon-v">service</span></div></div></td>
+					</tr>
+				</tbody></table>
+			</div>
+		</div>
+<!-- [Format Time: 0.0001 seconds] -->
+<p>&nbsp;</p>
+<p><a name="Step03"></a><strong>3. Pairing<br>
+</strong>To establish a connection, Raspberry Pi and the phone need to be paired.</p>
+<p>3-1. Launch bluetoothctl.</p><!-- Crayon Syntax Highlighter v_2.7.2_beta -->
+
+		<div id="crayon-5e0a501fa66d4260840673" class="crayon-syntax crayon-theme-1c-zapros crayon-font-consolas crayon-os-pc print-yes notranslate crayon-wrapped" data-settings=" minimize scroll-always wrap" style="font-size: 12px !important; line-height: 20px !important; height: auto;">
+		
+			<div class="crayon-plain-wrap"></div>
+			<div class="crayon-main" style="position: relative; z-index: 1;">
+				<table class="crayon-table" style="">
+					<tbody><tr class="crayon-row">
+				<td class="crayon-nums " data-settings="show">
+					<div class="crayon-nums-content" style="font-size: 12px !important; line-height: 20px !important;"><div class="crayon-num" data-line="crayon-5e0a501fa66d4260840673-1" style="height: 20px;">1</div></div>
+				</td>
+						<td class="crayon-code"><div class="crayon-pre" style="font-size: 12px !important; line-height: 20px !important; -moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4;"><div class="crayon-line" id="crayon-5e0a501fa66d4260840673-1"><span class="crayon-v">bluetoothctl</span></div></div></td>
+					</tr>
+				</tbody></table>
+			</div>
+		</div>
+<!-- [Format Time: 0.0001 seconds] -->
+<p>3-2. Enter below in order to be discovered from the phone.</p><!-- Crayon Syntax Highlighter v_2.7.2_beta -->
+
+		<div id="crayon-5e0a501fa66d7475028761" class="crayon-syntax crayon-theme-1c-zapros crayon-font-consolas crayon-os-pc print-yes notranslate crayon-wrapped" data-settings=" minimize scroll-always wrap" style="font-size: 12px !important; line-height: 20px !important; height: auto;">
+		
+			<div class="crayon-plain-wrap"></div>
+			<div class="crayon-main" style="position: relative; z-index: 1;">
+				<table class="crayon-table" style="">
+					<tbody><tr class="crayon-row">
+				<td class="crayon-nums " data-settings="show">
+					<div class="crayon-nums-content" style="font-size: 12px !important; line-height: 20px !important;"><div class="crayon-num" data-line="crayon-5e0a501fa66d7475028761-1" style="height: 20px;">1</div></div>
+				</td>
+						<td class="crayon-code"><div class="crayon-pre" style="font-size: 12px !important; line-height: 20px !important; -moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4;"><div class="crayon-line" id="crayon-5e0a501fa66d7475028761-1"><span class="crayon-e">discoverable </span><span class="crayon-v">on</span></div></div></td>
+					</tr>
+				</tbody></table>
+			</div>
+		</div>
+<!-- [Format Time: 0.0001 seconds] -->
+<p>3-3. On the phone, scan for Raspberry Pi and pair. You should be able to see something like below.</p><!-- Crayon Syntax Highlighter v_2.7.2_beta -->
+
+		<div id="crayon-5e0a501fa66da331673247" class="crayon-syntax crayon-theme-1c-zapros crayon-font-consolas crayon-os-pc print-yes notranslate crayon-wrapped" data-settings=" minimize scroll-always wrap" style="font-size: 12px !important; line-height: 20px !important; height: auto;">
+		
+			<div class="crayon-plain-wrap"></div>
+			<div class="crayon-main" style="position: relative; z-index: 1;">
+				<table class="crayon-table" style="">
+					<tbody><tr class="crayon-row">
+				<td class="crayon-nums " data-settings="show">
+					<div class="crayon-nums-content" style="font-size: 12px !important; line-height: 20px !important;"><div class="crayon-num" data-line="crayon-5e0a501fa66da331673247-1" style="height: 20px;">1</div></div>
+				</td>
+						<td class="crayon-code"><div class="crayon-pre" style="font-size: 12px !important; line-height: 20px !important; -moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4;"><div class="crayon-line" id="crayon-5e0a501fa66da331673247-1"><span class="crayon-sy">[</span><span class="crayon-v">CHG</span><span class="crayon-sy">]</span><span class="crayon-h"> </span><span class="crayon-e">Device </span><span class="crayon-v">XX</span><span class="crayon-o">:</span><span class="crayon-v">XX</span><span class="crayon-o">:</span><span class="crayon-v">XX</span><span class="crayon-o">:</span><span class="crayon-v">XX</span><span class="crayon-o">:</span><span class="crayon-v">XX</span><span class="crayon-o">:</span><span class="crayon-e">XX </span><span class="crayon-v">Paired</span><span class="crayon-o">:</span><span class="crayon-h"> </span><span class="crayon-v">yes</span></div></div></td>
+					</tr>
+				</tbody></table>
+			</div>
+		</div>
+<!-- [Format Time: 0.0002 seconds] -->
+<p>3-4. Press Ctrl+D to quit.</p>
+<p>&nbsp;</p>
+<p><a name="Step04"></a><strong>4. Establishing Connection from Phone</strong></p>
+<p>4-1. Listen for incoming connection on Raspberry Pi.</p><!-- Crayon Syntax Highlighter v_2.7.2_beta -->
+
+		<div id="crayon-5e0a501fa66df447451146" class="crayon-syntax crayon-theme-1c-zapros crayon-font-consolas crayon-os-pc print-yes notranslate crayon-wrapped" data-settings=" minimize scroll-always wrap" style="font-size: 12px !important; line-height: 20px !important; height: auto;">
+		
+			<div class="crayon-plain-wrap"></div>
+			<div class="crayon-main" style="position: relative; z-index: 1;">
+				<table class="crayon-table" style="">
+					<tbody><tr class="crayon-row">
+				<td class="crayon-nums " data-settings="show">
+					<div class="crayon-nums-content" style="font-size: 12px !important; line-height: 20px !important;"><div class="crayon-num" data-line="crayon-5e0a501fa66df447451146-1" style="height: 20px;">1</div></div>
+				</td>
+						<td class="crayon-code"><div class="crayon-pre" style="font-size: 12px !important; line-height: 20px !important; -moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4;"><div class="crayon-line" id="crayon-5e0a501fa66df447451146-1"><span class="crayon-e">sudo </span><span class="crayon-e">rfcomm </span><span class="crayon-e">watch </span><span class="crayon-v">hci0</span></div></div></td>
+					</tr>
+				</tbody></table>
+			</div>
+		</div>
+<!-- [Format Time: 0.0001 seconds] -->
+<p>4-2. Install and launch “Serial Bluetooth Terminal” app<a href="#Ref04">[4] </a> on the phone.</p>
+<p>4-3. In the app, go to “Device” menu and select Raspberry Pi. If 
+everything goes well and the connection is established, you should be 
+able to see like this:</p><!-- Crayon Syntax Highlighter v_2.7.2_beta -->
+
+		<div id="crayon-5e0a501fa66e2358170415" class="crayon-syntax crayon-theme-1c-zapros crayon-font-consolas crayon-os-pc print-yes notranslate crayon-wrapped" data-settings=" minimize scroll-always wrap" style="font-size: 12px !important; line-height: 20px !important; height: auto;">
+		
+			<div class="crayon-plain-wrap"></div>
+			<div class="crayon-main" style="position: relative; z-index: 1;">
+				<table class="crayon-table" style="">
+					<tbody><tr class="crayon-row">
+				<td class="crayon-nums " data-settings="show">
+					<div class="crayon-nums-content" style="font-size: 12px !important; line-height: 20px !important;"><div class="crayon-num" data-line="crayon-5e0a501fa66e2358170415-1" style="height: 20px;">1</div><div class="crayon-num crayon-striped-num" data-line="crayon-5e0a501fa66e2358170415-2" style="height: 20px;">2</div><div class="crayon-num" data-line="crayon-5e0a501fa66e2358170415-3" style="height: 20px;">3</div><div class="crayon-num crayon-striped-num" data-line="crayon-5e0a501fa66e2358170415-4" style="height: 20px;">4</div></div>
+				</td>
+						<td class="crayon-code"><div class="crayon-pre" style="font-size: 12px !important; line-height: 20px !important; -moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4;"><div class="crayon-line" id="crayon-5e0a501fa66e2358170415-1"><span class="crayon-sy">$</span><span class="crayon-h"> </span><span class="crayon-e">sudo </span><span class="crayon-e">rfcomm </span><span class="crayon-e">watch </span><span class="crayon-e">hci0</span></div><div class="crayon-line crayon-striped-line" id="crayon-5e0a501fa66e2358170415-2"><span class="crayon-e">Waiting </span><span class="crayon-st">for</span><span class="crayon-h"> </span><span class="crayon-e">connection </span><span class="crayon-e">on </span><span class="crayon-i">channel</span><span class="crayon-h"> </span><span class="crayon-cn">1</span></div><div class="crayon-line" id="crayon-5e0a501fa66e2358170415-3"><span class="crayon-e">Connection </span><span class="crayon-e">from </span><span class="crayon-v">XX</span><span class="crayon-o">:</span><span class="crayon-v">XX</span><span class="crayon-o">:</span><span class="crayon-v">XX</span><span class="crayon-o">:</span><span class="crayon-v">XX</span><span class="crayon-o">:</span><span class="crayon-v">XX</span><span class="crayon-o">:</span><span class="crayon-e">XX </span><span class="crayon-st">to</span><span class="crayon-h"> </span><span class="crayon-o">/</span><span class="crayon-v">dev</span><span class="crayon-o">/</span><span class="crayon-e">rfcomm0</span></div><div class="crayon-line crayon-striped-line" id="crayon-5e0a501fa66e2358170415-4"><span class="crayon-e">Press </span><span class="crayon-v">CTRL</span><span class="crayon-o">-</span><span class="crayon-i">C</span><span class="crayon-h"> </span><span class="crayon-st">for</span><span class="crayon-h"> </span><span class="crayon-v">hangup</span></div></div></td>
+					</tr>
+				</tbody></table>
+			</div>
+		</div>
+<!-- [Format Time: 0.0003 seconds] -->
+<p>&nbsp;</p>
+<p><a name="Step05"></a><strong>5. Connecting Serial Terminal on Raspberry Pi</strong><br>
+5-1.&nbsp;Open another terminal and launch the serial terminal.</p><!-- Crayon Syntax Highlighter v_2.7.2_beta -->
+
+		<div id="crayon-5e0a501fa66e5427612676" class="crayon-syntax crayon-theme-1c-zapros crayon-font-consolas crayon-os-pc print-yes notranslate crayon-wrapped" data-settings=" minimize scroll-always wrap" style="font-size: 12px !important; line-height: 20px !important; height: auto;">
+		
+			<div class="crayon-plain-wrap"></div>
+			<div class="crayon-main" style="position: relative; z-index: 1;">
+				<table class="crayon-table" style="">
+					<tbody><tr class="crayon-row">
+				<td class="crayon-nums " data-settings="show">
+					<div class="crayon-nums-content" style="font-size: 12px !important; line-height: 20px !important;"><div class="crayon-num" data-line="crayon-5e0a501fa66e5427612676-1" style="height: 20px;">1</div></div>
+				</td>
+						<td class="crayon-code"><div class="crayon-pre" style="font-size: 12px !important; line-height: 20px !important; -moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4;"><div class="crayon-line" id="crayon-5e0a501fa66e5427612676-1"><span class="crayon-v">minicom</span><span class="crayon-h"> </span><span class="crayon-o">-</span><span class="crayon-i">b</span><span class="crayon-h"> </span><span class="crayon-cn">9600</span><span class="crayon-h"> </span><span class="crayon-o">-</span><span class="crayon-v">o</span><span class="crayon-h"> </span><span class="crayon-o">-</span><span class="crayon-v">D</span><span class="crayon-h"> </span><span class="crayon-o">/</span><span class="crayon-v">dev</span><span class="crayon-o">/</span><span class="crayon-v">rfcomm0</span></div></div></td>
+					</tr>
+				</tbody></table>
+			</div>
+		</div>
+<!-- [Format Time: 0.0002 seconds] -->
+<p>&nbsp;</p>
+<p><a name="Step06"></a><strong>6. Test<br>
+</strong>6-1. Input some text on the phone.</p>
+<p><img class="alignnone wp-image-3373" src="Setting%20Up%20Bluetooth%20Serial%20Port%20Profile%20on%20Raspberry%20Pi%20using%20sdptool_dosyalar/hello-from-android-on-android.jfif" alt="" srcset="https://scribles.net/wp-content/uploads/2019/03/hello-from-android-on-android.jpg 491w, https://scribles.net/wp-content/uploads/2019/03/hello-from-android-on-android-300x289.jpg 300w" sizes="(max-width: 250px) 100vw, 250px" width="250" height="241"></p>
+<p>You should be able to see the text on Raspberry Pi’s serial terminal.</p>
+<p><img class="alignnone wp-image-3371" src="Setting%20Up%20Bluetooth%20Serial%20Port%20Profile%20on%20Raspberry%20Pi%20using%20sdptool_dosyalar/hello-from-android-on-rpi.jfif" alt="" srcset="https://scribles.net/wp-content/uploads/2019/03/hello-from-android-on-rpi.jpg 861w, https://scribles.net/wp-content/uploads/2019/03/hello-from-android-on-rpi-300x104.jpg 300w, https://scribles.net/wp-content/uploads/2019/03/hello-from-android-on-rpi-768x267.jpg 768w, https://scribles.net/wp-content/uploads/2019/03/hello-from-android-on-rpi-840x292.jpg 840w" sizes="(max-width: 438px) 100vw, 438px" width="438" height="152"></p>
+<p>6-2. Input some text back to the phone on Raspberry Pi.</p>
+<p><img class="alignnone wp-image-3372" src="Setting%20Up%20Bluetooth%20Serial%20Port%20Profile%20on%20Raspberry%20Pi%20using%20sdptool_dosyalar/hello-from-rpi-on-rpi.jfif" alt="" srcset="https://scribles.net/wp-content/uploads/2019/03/hello-from-rpi-on-rpi.jpg 863w, https://scribles.net/wp-content/uploads/2019/03/hello-from-rpi-on-rpi-300x101.jpg 300w, https://scribles.net/wp-content/uploads/2019/03/hello-from-rpi-on-rpi-768x259.jpg 768w, https://scribles.net/wp-content/uploads/2019/03/hello-from-rpi-on-rpi-840x283.jpg 840w" sizes="(max-width: 440px) 100vw, 440px" width="440" height="148"></p>
+<p>You should be able to see the text on the phone.</p>
+<p><img class="alignnone wp-image-3374" src="Setting%20Up%20Bluetooth%20Serial%20Port%20Profile%20on%20Raspberry%20Pi%20using%20sdptool_dosyalar/hello-from-rpi-on-android.jfif" alt="" srcset="https://scribles.net/wp-content/uploads/2019/03/hello-from-rpi-on-android.jpg 493w, https://scribles.net/wp-content/uploads/2019/03/hello-from-rpi-on-android-300x287.jpg 300w" sizes="(max-width: 251px) 100vw, 251px" width="251" height="240"></p>
+<p>&nbsp;</p>
+<p><a name="Reference"></a><strong>References</strong><br>
+<a name="Ref01"></a>[1] <a href="https://en.wikipedia.org/wiki/List_of_Bluetooth_profiles#Serial_Port_Profile_(SPP)" target="_blank" rel="noopener noreferrer">Serial_Port_Profile_(SPP) – Wikipedia</a><br>
+<a name="Ref02"></a>[2] <a href="https://linux.die.net/man/1/minicom" target="_blank" rel="noopener noreferrer">minicom(1) – Linux man page</a><br>
+<a name="Ref03"></a>[3] <a href="https://bbs.archlinux.org/viewtopic.php?id=201672" target="_blank" rel="noopener noreferrer">sdptool is broken in Bluez 5 – Arch Linux</a><br>
+<a name="Ref04"></a>[4] <a href="https://play.google.com/store/apps/details?id=de.kai_morich.serial_bluetooth_terminal&amp;hl=en_US" target="_blank" rel="noopener noreferrer">Serial Bluetooth Terminal – Google Play</a><br>
+<a name="Ref05"></a>[5] <a href="https://www.raspberrypi.org/forums/viewtopic.php?f=28&amp;t=138544&amp;sid=14d604c13eaa0c6af5b33cf4e0f443f7#p919420" target="_blank" rel="noopener noreferrer">Bluetooth issues – Raspberry Pi Forum</a></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<div class="code-block code-block-1" style="margin: 8px 0; clear: both;">
+<div id="amzn-assoc-ad-9570995a-3fda-4cdc-a21a-cf82bc881a96"></div><script async="" src="Setting%20Up%20Bluetooth%20Serial%20Port%20Profile%20on%20Raspberry%20Pi%20using%20sdptool_dosyalar/onejs"></script></div>
+	</div><!-- .entry-content -->
+
+	<footer class="entry-footer">
+		<span class="cat-links uk-display-block"><i class="uk-icon-file-text"></i> Posted in: <a href="https://scribles.net/category/how-to/" rel="category tag">How To</a></span> <span class="tags-links uk-display-block"><i class="uk-icon-tags"></i> Tagged: <a href="https://scribles.net/tag/bluetooth/" rel="tag">Bluetooth</a>, <a href="https://scribles.net/tag/bluez/" rel="tag">BlueZ</a>, <a href="https://scribles.net/tag/minicom/" rel="tag">minicom</a>, <a href="https://scribles.net/tag/raspberry-pi/" rel="tag">Raspberry Pi</a>, <a href="https://scribles.net/tag/serial-communication/" rel="tag">Serial Communication</a>, <a href="https://scribles.net/tag/spp/" rel="tag">SPP</a>, <a href="https://scribles.net/tag/uart/" rel="tag">UART</a></span> 	</footer><!-- .entry-footer -->
+</article><!-- #post-## -->
+
+<div id="comments" class="comments-area uk-margin">
+
+		Sponsor Link<br>
+	
+<script async="" src="Setting%20Up%20Bluetooth%20Serial%20Port%20Profile%20on%20Raspberry%20Pi%20using%20sdptool_dosyalar/adsbygoogle.js"></script>
+<!-- responsive2 -->
+<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-5165083875877654" data-ad-slot="2050382846" data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+	
+	
+	
+			<h2 class="comments-title uk-margin-large uk-text-center">
+			10 Comments		</h2>
+
+		<ol class="comment-list">
+					<li id="comment-70" class="comment even thread-even depth-1 parent">
+			<article id="div-comment-70" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt="" src="Setting%20Up%20Bluetooth%20Serial%20Port%20Profile%20on%20Raspberry%20Pi%20using%20sdptool_dosyalar/4ea494c38b04cea5950376af9e102553.png" srcset="https://secure.gravatar.com/avatar/4ea494c38b04cea5950376af9e102553?s=64&amp;d=blank&amp;r=g 2x" class="avatar avatar-32 photo" width="32" height="32">						<b class="fn"><a href="http://www.icm.hr/" rel="external nofollow ugc" class="url">Tomislav</a></b> <span class="says">says:</span>					</div><!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="https://scribles.net/setting-up-bluetooth-serial-port-profile-on-raspberry-pi/#comment-70">
+							<time datetime="2019-05-13T02:29:37-05:00">
+								May 13, 2019 at 2:29 am							</time>
+						</a>
+											</div><!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>Could you make a tutorial for setting up HM-10 as virtual serial
+ port? I am unable to get it working using sdptool (says host is down, 
+hcltool lescan or lecc says it’s ok). Firmware v540…</p>
+				</div><!-- .comment-content -->
+
+				<div class="reply"><a rel="nofollow" class="comment-reply-link" href="https://scribles.net/setting-up-bluetooth-serial-port-profile-on-raspberry-pi/?replytocom=70#respond" data-commentid="70" data-postid="3366" data-belowelement="div-comment-70" data-respondelement="respond" aria-label="Reply to Tomislav">Reply</a></div>			</article><!-- .comment-body -->
+		<ol class="children">
+		<li id="comment-79" class="comment byuser comment-author-max bypostauthor odd alt depth-2">
+			<article id="div-comment-79" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt="" src="Setting%20Up%20Bluetooth%20Serial%20Port%20Profile%20on%20Raspberry%20Pi%20using%20sdptool_dosyalar/225852ab703cba41a02fce8f47a59b55.png" srcset="https://secure.gravatar.com/avatar/225852ab703cba41a02fce8f47a59b55?s=64&amp;d=blank&amp;r=g 2x" class="avatar avatar-32 photo" width="32" height="32">						<b class="fn"><a href="https://scribles.net/" rel="external nofollow ugc" class="url">max</a></b> <span class="says">says:</span>					</div><!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="https://scribles.net/setting-up-bluetooth-serial-port-profile-on-raspberry-pi/#comment-79">
+							<time datetime="2019-05-15T21:19:34-05:00">
+								May 15, 2019 at 9:19 pm							</time>
+						</a>
+											</div><!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>Can you elaborate what you are trying to do? Are you trying to 
+establish virtual serial port over BLE using HM-10 on Raspberry Pi? I 
+think sdptool is for classic Bluetooth and not for BLE. You can 
+communicate with HM-10 via UART and control it by using AT commands 
+provided by HM-10. However, I don’t have HM-10 and not sure if it 
+supports custom GATT profiles.</p>
+				</div><!-- .comment-content -->
+
+				<div class="reply"><a rel="nofollow" class="comment-reply-link" href="https://scribles.net/setting-up-bluetooth-serial-port-profile-on-raspberry-pi/?replytocom=79#respond" data-commentid="79" data-postid="3366" data-belowelement="div-comment-79" data-respondelement="respond" aria-label="Reply to max">Reply</a></div>			</article><!-- .comment-body -->
+		</li><!-- #comment-## -->
+</ol><!-- .children -->
+</li><!-- #comment-## -->
+		<li id="comment-106" class="comment even thread-odd thread-alt depth-1 parent">
+			<article id="div-comment-106" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt="" src="Setting%20Up%20Bluetooth%20Serial%20Port%20Profile%20on%20Raspberry%20Pi%20using%20sdptool_dosyalar/c25a115b0169e8da19bf7d59233b00b5.png" srcset="https://secure.gravatar.com/avatar/c25a115b0169e8da19bf7d59233b00b5?s=64&amp;d=blank&amp;r=g 2x" class="avatar avatar-32 photo" width="32" height="32">						<b class="fn">Bruno</b> <span class="says">says:</span>					</div><!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="https://scribles.net/setting-up-bluetooth-serial-port-profile-on-raspberry-pi/#comment-106">
+							<time datetime="2019-06-19T10:14:21-05:00">
+								June 19, 2019 at 10:14 am							</time>
+						</a>
+											</div><!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>Hi, great tutorial.<br>
+How can I do the same using PC. I have a bluetooth dongle connected to 
+my PC. I want to be to get the devices to talk to each other and 
+exchange data.</p>
+<p>Thanks</p>
+				</div><!-- .comment-content -->
+
+				<div class="reply"><a rel="nofollow" class="comment-reply-link" href="https://scribles.net/setting-up-bluetooth-serial-port-profile-on-raspberry-pi/?replytocom=106#respond" data-commentid="106" data-postid="3366" data-belowelement="div-comment-106" data-respondelement="respond" aria-label="Reply to Bruno">Reply</a></div>			</article><!-- .comment-body -->
+		<ol class="children">
+		<li id="comment-113" class="comment byuser comment-author-max bypostauthor odd alt depth-2">
+			<article id="div-comment-113" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt="" src="Setting%20Up%20Bluetooth%20Serial%20Port%20Profile%20on%20Raspberry%20Pi%20using%20sdptool_dosyalar/225852ab703cba41a02fce8f47a59b55.png" srcset="https://secure.gravatar.com/avatar/225852ab703cba41a02fce8f47a59b55?s=64&amp;d=blank&amp;r=g 2x" class="avatar avatar-32 photo" width="32" height="32">						<b class="fn"><a href="https://scribles.net/" rel="external nofollow ugc" class="url">max</a></b> <span class="says">says:</span>					</div><!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="https://scribles.net/setting-up-bluetooth-serial-port-profile-on-raspberry-pi/#comment-113">
+							<time datetime="2019-06-28T10:00:28-05:00">
+								June 28, 2019 at 10:00 am							</time>
+						</a>
+											</div><!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>Hi Bruno, If your PC is running Linux (Ubuntu/Debian), the steps should be very similar.</p>
+				</div><!-- .comment-content -->
+
+				<div class="reply"><a rel="nofollow" class="comment-reply-link" href="https://scribles.net/setting-up-bluetooth-serial-port-profile-on-raspberry-pi/?replytocom=113#respond" data-commentid="113" data-postid="3366" data-belowelement="div-comment-113" data-respondelement="respond" aria-label="Reply to max">Reply</a></div>			</article><!-- .comment-body -->
+		</li><!-- #comment-## -->
+		<li id="comment-142" class="comment even depth-2 parent">
+			<article id="div-comment-142" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt="" src="Setting%20Up%20Bluetooth%20Serial%20Port%20Profile%20on%20Raspberry%20Pi%20using%20sdptool_dosyalar/a9038f0b5afc98068aa9cddb7a624b81.png" srcset="https://secure.gravatar.com/avatar/a9038f0b5afc98068aa9cddb7a624b81?s=64&amp;d=blank&amp;r=g 2x" class="avatar avatar-32 photo" width="32" height="32">						<b class="fn">Clifford Slocombe</b> <span class="says">says:</span>					</div><!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="https://scribles.net/setting-up-bluetooth-serial-port-profile-on-raspberry-pi/#comment-142">
+							<time datetime="2019-07-20T06:52:33-05:00">
+								July 20, 2019 at 6:52 am							</time>
+						</a>
+											</div><!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>On Windows 10, run Settings, search for “Bluetooth &amp; Other 
+Devices”,  Select Add Device button, then Bluetooth, then select the 
+raspberrypi.  The SPP device will then be enumerated at two COM ports – I
+ have no idea why two appear (seems to be a Windows issue); in my 
+experience only one of them will work.</p>
+<p>I use TeraTerm Pro as the terminal emulator in Windows.  PuTTY is another option, but is truly ugly!</p>
+				</div><!-- .comment-content -->
+
+				<div class="reply"><a rel="nofollow" class="comment-reply-link" href="https://scribles.net/setting-up-bluetooth-serial-port-profile-on-raspberry-pi/?replytocom=142#respond" data-commentid="142" data-postid="3366" data-belowelement="div-comment-142" data-respondelement="respond" aria-label="Reply to Clifford Slocombe">Reply</a></div>			</article><!-- .comment-body -->
+		<ol class="children">
+		<li id="comment-144" class="comment odd alt depth-3">
+			<article id="div-comment-144" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt="" src="Setting%20Up%20Bluetooth%20Serial%20Port%20Profile%20on%20Raspberry%20Pi%20using%20sdptool_dosyalar/a9038f0b5afc98068aa9cddb7a624b81.png" srcset="https://secure.gravatar.com/avatar/a9038f0b5afc98068aa9cddb7a624b81?s=64&amp;d=blank&amp;r=g 2x" class="avatar avatar-32 photo" width="32" height="32">						<b class="fn">Clifford Slocombe</b> <span class="says">says:</span>					</div><!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="https://scribles.net/setting-up-bluetooth-serial-port-profile-on-raspberry-pi/#comment-144">
+							<time datetime="2019-07-20T10:52:34-05:00">
+								July 20, 2019 at 10:52 am							</time>
+						</a>
+											</div><!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>… The two COM ports are one each for incomming and outgoing 
+connections – the active one depends on which end initiates the 
+connection I believe.</p>
+<p>Open the Windows Control Panel.  In search box, type “Bluetooth”, and
+ then click “Change Bluetooth settings”, select the COM Ports tab, and 
+it will show which is which.</p>
+				</div><!-- .comment-content -->
+
+				<div class="reply"><a rel="nofollow" class="comment-reply-link" href="https://scribles.net/setting-up-bluetooth-serial-port-profile-on-raspberry-pi/?replytocom=144#respond" data-commentid="144" data-postid="3366" data-belowelement="div-comment-144" data-respondelement="respond" aria-label="Reply to Clifford Slocombe">Reply</a></div>			</article><!-- .comment-body -->
+		</li><!-- #comment-## -->
+</ol><!-- .children -->
+</li><!-- #comment-## -->
+</ol><!-- .children -->
+</li><!-- #comment-## -->
+		<li id="comment-127" class="comment even thread-even depth-1">
+			<article id="div-comment-127" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt="" src="Setting%20Up%20Bluetooth%20Serial%20Port%20Profile%20on%20Raspberry%20Pi%20using%20sdptool_dosyalar/f734ac430e1f13558cd314ff453a8092.png" srcset="https://secure.gravatar.com/avatar/f734ac430e1f13558cd314ff453a8092?s=64&amp;d=blank&amp;r=g 2x" class="avatar avatar-32 photo" width="32" height="32">						<b class="fn">Cjh</b> <span class="says">says:</span>					</div><!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="https://scribles.net/setting-up-bluetooth-serial-port-profile-on-raspberry-pi/#comment-127">
+							<time datetime="2019-07-07T21:56:38-05:00">
+								July 7, 2019 at 9:56 pm							</time>
+						</a>
+											</div><!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>Hello,</p>
+<p>I have a GPS running on /dev/serial0<br>
+when I sudo bluetoothctl<br>
+discoverable on<br>
+I get No default controller available</p>
+<p>What do I need to do ?</p>
+				</div><!-- .comment-content -->
+
+				<div class="reply"><a rel="nofollow" class="comment-reply-link" href="https://scribles.net/setting-up-bluetooth-serial-port-profile-on-raspberry-pi/?replytocom=127#respond" data-commentid="127" data-postid="3366" data-belowelement="div-comment-127" data-respondelement="respond" aria-label="Reply to Cjh">Reply</a></div>			</article><!-- .comment-body -->
+		</li><!-- #comment-## -->
+		<li id="comment-141" class="comment odd alt thread-odd thread-alt depth-1 parent">
+			<article id="div-comment-141" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt="" src="Setting%20Up%20Bluetooth%20Serial%20Port%20Profile%20on%20Raspberry%20Pi%20using%20sdptool_dosyalar/a9038f0b5afc98068aa9cddb7a624b81.png" srcset="https://secure.gravatar.com/avatar/a9038f0b5afc98068aa9cddb7a624b81?s=64&amp;d=blank&amp;r=g 2x" class="avatar avatar-32 photo" width="32" height="32">						<b class="fn">Clifford Slocombe</b> <span class="says">says:</span>					</div><!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="https://scribles.net/setting-up-bluetooth-serial-port-profile-on-raspberry-pi/#comment-141">
+							<time datetime="2019-07-20T06:25:07-05:00">
+								July 20, 2019 at 6:25 am							</time>
+						</a>
+											</div><!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>Can you clarify what parts of this are one-time only persistent operations and which I have to do for each connection session?</p>
+<p>How do I make it persistent, so the port can be connected at any time?</p>
+<p>I exited minicom (no mean feat in itself), and hung-up the rfcomm 
+session and thereafter could not re-establish a connection – the 
+/dev/rfcomm0 device not present it seems.  rfcomm stops on “Waiting for 
+connection on channel 1”.</p>
+				</div><!-- .comment-content -->
+
+				<div class="reply"><a rel="nofollow" class="comment-reply-link" href="https://scribles.net/setting-up-bluetooth-serial-port-profile-on-raspberry-pi/?replytocom=141#respond" data-commentid="141" data-postid="3366" data-belowelement="div-comment-141" data-respondelement="respond" aria-label="Reply to Clifford Slocombe">Reply</a></div>			</article><!-- .comment-body -->
+		<ol class="children">
+		<li id="comment-143" class="comment even depth-2">
+			<article id="div-comment-143" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt="" src="Setting%20Up%20Bluetooth%20Serial%20Port%20Profile%20on%20Raspberry%20Pi%20using%20sdptool_dosyalar/a9038f0b5afc98068aa9cddb7a624b81.png" srcset="https://secure.gravatar.com/avatar/a9038f0b5afc98068aa9cddb7a624b81?s=64&amp;d=blank&amp;r=g 2x" class="avatar avatar-32 photo" width="32" height="32">						<b class="fn">Clifford Slocombe</b> <span class="says">says:</span>					</div><!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="https://scribles.net/setting-up-bluetooth-serial-port-profile-on-raspberry-pi/#comment-143">
+							<time datetime="2019-07-20T10:34:44-05:00">
+								July 20, 2019 at 10:34 am							</time>
+						</a>
+											</div><!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>Never mind.. figured out most of this – the connection is shown 
+when the terminal in Windows opens the port.  And rfcomm running in teh 
+background using:</p>
+<p>    sudo rfcomm watch hci0 &amp;</p>
+<p>works, but it seems that the method at <a href="https://raspberry-projects.com/pi/pi-operating-systems/raspbian/bluetooth/serial-over-bluetooth" rel="nofollow ugc">https://raspberry-projects.com/pi/pi-operating-systems/raspbian/bluetooth/serial-over-bluetooth</a>  may suit my needs better.</p>
+				</div><!-- .comment-content -->
+
+				<div class="reply"><a rel="nofollow" class="comment-reply-link" href="https://scribles.net/setting-up-bluetooth-serial-port-profile-on-raspberry-pi/?replytocom=143#respond" data-commentid="143" data-postid="3366" data-belowelement="div-comment-143" data-respondelement="respond" aria-label="Reply to Clifford Slocombe">Reply</a></div>			</article><!-- .comment-body -->
+		</li><!-- #comment-## -->
+</ol><!-- .children -->
+</li><!-- #comment-## -->
+		<li id="comment-164" class="comment odd alt thread-even depth-1">
+			<article id="div-comment-164" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt="" src="Setting%20Up%20Bluetooth%20Serial%20Port%20Profile%20on%20Raspberry%20Pi%20using%20sdptool_dosyalar/042595d4ee1b5a834153635daf9e5dd9.png" srcset="https://secure.gravatar.com/avatar/042595d4ee1b5a834153635daf9e5dd9?s=64&amp;d=blank&amp;r=g 2x" class="avatar avatar-32 photo" width="32" height="32">						<b class="fn">Xiaoqun Yu</b> <span class="says">says:</span>					</div><!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="https://scribles.net/setting-up-bluetooth-serial-port-profile-on-raspberry-pi/#comment-164">
+							<time datetime="2019-09-05T09:13:55-05:00">
+								September 5, 2019 at 9:13 am							</time>
+						</a>
+											</div><!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>Hi, </p>
+<p>Great tutorial! It works on raspberry pi well. However, when I 
+applied it into Jetson Nano (because there is no bluetooth module for 
+jetson nano, I used bluetooth adapter)， it could not work. If I edit 
+/etc/systemd/system/dbus-org.bluez.service as you wrote in the tutorial,
+ the bluetooth service fails to start. When I give the command “sudo 
+rfcomm bind 0 00:04:3E:4B:32:40”, the error message araise which said 
+“RFCOMM TTY support not available”. For my issue, do you have any 
+suggestions?</p>
+				</div><!-- .comment-content -->
+
+				<div class="reply"><a rel="nofollow" class="comment-reply-link" href="https://scribles.net/setting-up-bluetooth-serial-port-profile-on-raspberry-pi/?replytocom=164#respond" data-commentid="164" data-postid="3366" data-belowelement="div-comment-164" data-respondelement="respond" aria-label="Reply to Xiaoqun Yu">Reply</a></div>			</article><!-- .comment-body -->
+		</li><!-- #comment-## -->
+		</ol><!-- .comment-list -->
+
+		
+	
+	
+		<div id="respond" class="comment-respond">
+		<h3 id="reply-title" class="comment-reply-title">Leave a Reply <small><a rel="nofollow" id="cancel-comment-reply-link" href="https://scribles.net/setting-up-bluetooth-serial-port-profile-on-raspberry-pi/#respond" style="display:none;">Cancel reply</a></small></h3><form action="https://scribles.net/wp-comments-post.php" method="post" id="commentform" class="comment-form" novalidate=""><p class="comment-notes"><span id="email-notes">Your email address will not be published.</span> Required fields are marked <span class="required">*</span></p><p class="comment-form-comment"><label for="comment">Comment</label> <textarea id="comment" name="comment" cols="45" rows="8" maxlength="65525" required="required"></textarea></p><p class="comment-form-author"><label for="author">Name <span class="required">*</span></label> <input id="author" name="author" type="text" size="30" maxlength="245" required="required"></p>
+<p class="comment-form-email"><label for="email">Email <span class="required">*</span></label> <input id="email" name="email" type="email" size="30" maxlength="100" aria-describedby="email-notes" required="required"></p>
+<p class="comment-form-url"><label for="url">Website</label> <input id="url" name="url" type="url" size="30" maxlength="200"></p>
+<p class="form-submit"><input name="submit" type="submit" id="submit" class="submit" value="Post Comment"> <input type="hidden" name="comment_post_ID" value="3366" id="comment_post_ID">
+<input type="hidden" name="comment_parent" id="comment_parent" value="0">
+</p><input type="hidden" name="js-spam-prevention" value="79c2f59f1f5a55a05ecc85aa3afb2818"></form>	</div><!-- #respond -->
+		<script type="text/javascript">
+        jQuery( document ).ready( function( $ ) {
+            $( '.comment-form, #registerform' ).append( '<input type="hidden" name="js-spam-prevention" value="79c2f59f1f5a55a05ecc85aa3afb2818"/>' );
+        } );
+	</script>
+	
+</div><!-- #comments -->
+
+		</main><!-- #main -->
+	</div><!-- #primary -->
+
+
+<aside id="secondary" class="widget-area uk-width-medium-1-4" role="complementary">
+	<section id="search-2" class="widget widget_search uk-panel uk-text-center-small"><form role="search" method="get" class="search-form" action="https://scribles.net/">
+				<label>
+					<span class="screen-reader-text">Search for:</span>
+					<input type="search" class="search-field" placeholder="Search …" name="s">
+				</label>
+				<input type="submit" class="search-submit" value="Search">
+			</form></section><section id="text-9" class="widget widget_text uk-panel uk-text-center-small">			<div class="textwidget"><hr>
+</div>
+		</section>		<section id="recent-posts-2" class="widget widget_recent_entries uk-panel uk-text-center-small">		<h2 class="widget-title uk-panel-title">Recent Posts</h2>		<ul>
+											<li>
+					<a href="https://scribles.net/setting-up-bluetooth-serial-port-profile-on-raspberry-pi-using-d-bus-api-2/">Setting Up Bluetooth Serial Port Profile on Raspberry Pi using D-Bus API (2)</a>
+											<span class="post-date">November 28, 2019</span>
+									</li>
+											<li>
+					<a href="https://scribles.net/creating-altbeacon-with-raspberry-pi-using-bluez-example-code-updated/">Creating AltBeacon with Raspberry Pi using BlueZ Example Code (updated)</a>
+											<span class="post-date">July 9, 2019</span>
+									</li>
+											<li>
+					<a href="https://scribles.net/creating-ibeacon-with-raspberry-pi-using-bluez-example-code-updated/">Creating iBeacon with Raspberry Pi using BlueZ Example Code (updated)</a>
+											<span class="post-date">July 9, 2019</span>
+									</li>
+											<li>
+					<a href="https://scribles.net/setting-up-i2c-serial-communication-on-raspberry-pi/">Setting Up I2C Serial Communication on Raspberry Pi</a>
+											<span class="post-date">July 8, 2019</span>
+									</li>
+											<li>
+					<a href="https://scribles.net/showing-album-cover-art-images-for-bluetooth-audio/">Showing Album Cover Art Images for Bluetooth Audio</a>
+											<span class="post-date">June 16, 2019</span>
+									</li>
+					</ul>
+		</section><section id="text-13" class="widget widget_text uk-panel uk-text-center-small">			<div class="textwidget"><hr>
+</div>
+		</section><section id="text-7" class="widget widget_text uk-panel uk-text-center-small"><h2 class="widget-title uk-panel-title">Sponsor Link</h2>			<div class="textwidget"><p><script async="" src="Setting%20Up%20Bluetooth%20Serial%20Port%20Profile%20on%20Raspberry%20Pi%20using%20sdptool_dosyalar/adsbygoogle.js"></script><br>
+<!-- skyscraper_160-600 --><br>
+<ins class="adsbygoogle" style="display: inline-block; width: 160px; height: 600px;" data-ad-client="ca-pub-5165083875877654" data-ad-slot="5892385620"></ins><br>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+</div>
+		</section><section id="custom_html-2" class="widget_text widget widget_custom_html uk-panel uk-text-center-small"><div class="textwidget custom-html-widget"><iframe src="//rcm-na.amazon-adsystem.com/e/cm?o=1&amp;p=14&amp;l=ur1&amp;category=electronics&amp;f=ifr&amp;linkID=4a765d3ea998ebce72379285367ce8eb&amp;t=scribles-20&amp;tracking_id=scribles-20" scrolling="no" border="0" marginwidth="0" style="border:none;" width="160" height="600" frameborder="0"></iframe></div></section><section id="text-11" class="widget widget_text uk-panel uk-text-center-small">			<div class="textwidget"><p><script async="" src="Setting%20Up%20Bluetooth%20Serial%20Port%20Profile%20on%20Raspberry%20Pi%20using%20sdptool_dosyalar/adsbygoogle.js"></script><br>
+<!-- vertical-medium_160-90 --><br>
+<ins class="adsbygoogle" style="display: inline-block; width: 160px; height: 90px;" data-ad-client="ca-pub-5165083875877654" data-ad-slot="9071059219"></ins><br>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+</div>
+		</section><section id="custom_html-4" class="widget_text widget widget_custom_html uk-panel uk-text-center-small"><div class="textwidget custom-html-widget"><iframe style="border: none;" src="//rcm-na.amazon-adsystem.com/e/cm?o=1&amp;p=14&amp;l=ur1&amp;category=homeaudiohometheater&amp;banner=1FM9GGNH67NYZW1KZ802&amp;f=ifr&amp;linkID=9180d543700a3a103e84b00bedfb1f8f&amp;t=scribles-20&amp;tracking_id=scribles-20" marginwidth="0" scrolling="no" width="160" height="600" frameborder="0"></iframe></div></section></aside><!-- #secondary -->
+		</div><!--.uk-grid-->
+	</div><!-- #content -->
+
+	<footer id="colophon" class="site-footer uk-text-center" role="contentinfo">
+		<div class="site-info">
+			
+<!--			Theme: Ultra Framework by <a href="http://e-press24.com/">e-press24</a>. -->
+		
+		</div><!-- .site-info -->
+	</footer><!-- #colophon -->
+</div><!-- #page -->
+
+<script type="text/javascript" src="Setting%20Up%20Bluetooth%20Serial%20Port%20Profile%20on%20Raspberry%20Pi%20using%20sdptool_dosyalar/uikit.js"></script>
+<script type="text/javascript" src="Setting%20Up%20Bluetooth%20Serial%20Port%20Profile%20on%20Raspberry%20Pi%20using%20sdptool_dosyalar/comment-reply.js"></script>
+<script type="text/javascript" src="Setting%20Up%20Bluetooth%20Serial%20Port%20Profile%20on%20Raspberry%20Pi%20using%20sdptool_dosyalar/wp-embed.js"></script>
+
+
+
+
+</body></html>
+<!--Generated by Endurance Page Cache-->
