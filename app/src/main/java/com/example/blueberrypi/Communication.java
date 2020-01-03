@@ -10,24 +10,39 @@ import android.bluetooth.BluetoothSocket;
 import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
 import android.widget.SeekBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import org.w3c.dom.Text;
+
 import java.io.IOException;
+import java.io.InputStream;
 import java.util.UUID;
 
 public class Communication extends AppCompatActivity {
     SeekBar changevolts;
-    TextView voltvalue;
+    TextView dutycycyle;
     TextView conndev;
+    TextView s21text;
+    TextView predstatus;
+    EditText tbfreq;
+    EditText tbvolt;
+    Button btsendvalues;
+    Button closeconn;
     String address=null;
     private ProgressDialog progress;
     BluetoothAdapter myblue=null;
     BluetoothSocket btSocket =null;
     BluetoothDevice remoteDevice;
     BluetoothServerSocket mmServer;
+    TextView statusconn;
     int barvalue;
+    public String freqandvolt;
+
 
 
 
@@ -43,8 +58,19 @@ public class Communication extends AppCompatActivity {
         address=newint.getStringExtra(MainActivity.EXTRA_ADRESS);
         changevolts=(SeekBar) findViewById(R.id.change_voltage);
         changevolts.setMax(100);
-        voltvalue=(TextView) findViewById(R.id.voltagevaluetext);
+        dutycycyle=(TextView) findViewById(R.id.voltagevaluetext);
         conndev = (TextView) findViewById(R.id.connecteddevice);
+        s21text=(TextView) findViewById(R.id.tv_s21);
+        btsendvalues=(Button) findViewById(R.id.button_sendvalues);
+        tbfreq=(EditText) findViewById(R.id.tb_freq);
+        tbvolt=(EditText) findViewById(R.id.tb_volt);
+        closeconn=(Button) findViewById(R.id.bt_closeconn);
+        statusconn=(TextView) findViewById(R.id.status_tv);
+        dutycycyle.setText(String.valueOf(barvalue));
+
+
+
+
 
         if(myblue == null){
             myblue = BluetoothAdapter.getDefaultAdapter();
@@ -55,6 +81,20 @@ public class Communication extends AppCompatActivity {
             name = myblue.getAddress();
         }
         conndev.setText(name);
+
+   btsendvalues.setOnClickListener(new View.OnClickListener() {
+       @Override
+       public void onClick(View v) {
+           sendvalues();
+       }
+   });
+   closeconn.setOnClickListener(new View.OnClickListener() {
+       @Override
+       public void onClick(View v) {
+           closeconnection();
+       }
+   });
+
 
         changevolts.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override
@@ -72,8 +112,48 @@ public class Communication extends AppCompatActivity {
             public void onStopTrackingTouch(SeekBar seekBar) {
 
             }
+
         });
 
+    }
+
+    private void closeconnection() {
+        if(btSocket!=null)
+        {
+            try{
+                String close="exit";
+                btSocket.getOutputStream().write(close.getBytes());
+                byte[] buffer= new byte[256];
+                int bytes;
+                bytes=btSocket.getInputStream().read(buffer);
+                String gelenveri2= new String(buffer,0,bytes);
+                statusconn.setText(gelenveri2);
+
+
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+
+    }
+
+    private void sendvalues() {
+
+        freqandvolt=tbfreq.getText().toString()+","+tbvolt.getText().toString()+","+String.valueOf(barvalue);
+
+        if(btSocket!=null)
+        {
+            try{
+                btSocket.getOutputStream().write(freqandvolt.getBytes());
+                byte[] buffer= new byte[256];
+                int bytes;
+                bytes=btSocket.getInputStream().read(buffer);
+                String gelenveri= new String(buffer,0,bytes);
+                s21text.setText(gelenveri);
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
     }
 
     private void changevoltage() {
@@ -81,12 +161,13 @@ public class Communication extends AppCompatActivity {
 
         if(btSocket!=null)
         {
-            try{
-                btSocket.getOutputStream().write(String.valueOf(barvalue).getBytes());
-                voltvalue.setText(String.valueOf(barvalue));
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
+            //try{
+                //btSocket.getOutputStream().write(String.valueOf(barvalue).getBytes());
+                dutycycyle.setText(String.valueOf(barvalue));
+                //s21text.setText(freqandvolt);
+            //} catch (IOException e) {
+            //    e.printStackTrace();
+            //}
         }
 
     }
