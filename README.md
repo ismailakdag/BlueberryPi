@@ -1,8 +1,6 @@
 # BlueberryPi
 Simple Bluetooth Client for Raspberry Pi. 
-Version 2.0
+Version 1.2
  Changes:
 
-Close connection button added.
-GUI reshaped.
-Inputstream added.
+S31 added.
