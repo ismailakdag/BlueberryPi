@@ -29,6 +29,7 @@ public class Communication extends AppCompatActivity {
     TextView conndev;
     TextView s21text;
     TextView predstatus;
+    TextView s31text;
     EditText tbfreq;
     EditText tbvolt;
     Button btsendvalues;
@@ -61,6 +62,7 @@ public class Communication extends AppCompatActivity {
         dutycycyle=(TextView) findViewById(R.id.voltagevaluetext);
         conndev = (TextView) findViewById(R.id.connecteddevice);
         s21text=(TextView) findViewById(R.id.tv_s21);
+        s31text=(TextView) findViewById(R.id.tv_s31);
         btsendvalues=(Button) findViewById(R.id.button_sendvalues);
         tbfreq=(EditText) findViewById(R.id.tb_freq);
         tbvolt=(EditText) findViewById(R.id.tb_volt);
@@ -149,7 +151,9 @@ public class Communication extends AppCompatActivity {
                 int bytes;
                 bytes=btSocket.getInputStream().read(buffer);
                 String gelenveri= new String(buffer,0,bytes);
-                s21text.setText(gelenveri);
+                String [] seperated= gelenveri.split("\\,");
+                s21text.setText(seperated[0]);
+                s31text.setText(seperated[1]);
             } catch (IOException e) {
                 e.printStackTrace();
             }

@@ -7,6 +7,30 @@
     android:background="@color/backColor"
     tools:context=".Communication">
 
+    <TextView
+        android:id="@+id/tv_s31"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="84dp"
+        android:layout_marginLeft="84dp"
+        android:layout_marginTop="64dp"
+        android:text="---"
+        android:textColor="@color/textColor"
+        app:layout_constraintStart_toEndOf="@+id/textView7"
+        app:layout_constraintTop_toBottomOf="@+id/button_sendvalues" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="160dp"
+        android:text="Predicted S31 Value:"
+        android:textColor="@color/textColor"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView6" />
+
     <SeekBar
         android:id="@+id/change_voltage"
         style="@style/Widget.AppCompat.SeekBar"

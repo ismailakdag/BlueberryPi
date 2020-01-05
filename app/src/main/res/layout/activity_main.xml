@@ -72,9 +72,9 @@
         android:layout_marginStart="20dp"
         android:layout_marginLeft="20dp"
         android:layout_marginTop="36dp"
-        android:text="Status: "
-        android:textSize="10sp"
+        android:text="Status:"
         android:textColor="@color/textColor"
+        android:textSize="10sp"
         app:fontFamily="monospace"
         app:layout_constraintStart_toEndOf="@+id/bluetooth_toggle"
         app:layout_constraintTop_toTopOf="parent" />
