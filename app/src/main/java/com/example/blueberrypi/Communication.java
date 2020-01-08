@@ -28,6 +28,7 @@ public class Communication extends AppCompatActivity {
     TextView dutycycyle;
     TextView conndev;
     TextView s21text;
+    TextView errortext;
     TextView predstatus;
     TextView s31text;
     EditText tbfreq;
@@ -67,6 +68,7 @@ public class Communication extends AppCompatActivity {
         tbfreq=(EditText) findViewById(R.id.tb_freq);
         tbvolt=(EditText) findViewById(R.id.tb_volt);
         closeconn=(Button) findViewById(R.id.bt_closeconn);
+        errortext=(TextView) findViewById(R.id.tv_error);
         statusconn=(TextView) findViewById(R.id.status_tv);
         dutycycyle.setText(String.valueOf(barvalue));
 
@@ -130,6 +132,10 @@ public class Communication extends AppCompatActivity {
                 bytes=btSocket.getInputStream().read(buffer);
                 String gelenveri2= new String(buffer,0,bytes);
                 statusconn.setText(gelenveri2);
+                Toast.makeText(getApplicationContext(), "Connection Closed!", Toast.LENGTH_SHORT).show();
+                Intent homeintent = new Intent (Communication.this,MainActivity.class);
+                startActivity(homeintent);
+
 
 
             } catch (IOException e) {
@@ -154,6 +160,7 @@ public class Communication extends AppCompatActivity {
                 String [] seperated= gelenveri.split("\\,");
                 s21text.setText(seperated[0]);
                 s31text.setText(seperated[1]);
+                errortext.setText(seperated[2]);
             } catch (IOException e) {
                 e.printStackTrace();
             }
