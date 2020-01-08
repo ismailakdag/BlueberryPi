@@ -188,6 +188,10 @@ tbvolt.setOnFocusChangeListener(new View.OnFocusChangeListener() {
                 s21text.setText(seperated[0]);
                 s31text.setText(seperated[1]);
                 errortext.setText(seperated[2]);
+                if(!seperated[2].matches("-")){
+                    Toast.makeText(getApplicationContext(),"The voltage value must be lower than 15 Volts.",Toast.LENGTH_SHORT).show();
+                }
+
                 View view = this.getCurrentFocus();
                 if(view!=null) {
                     InputMethodManager imm = (InputMethodManager)getSystemService(Context.INPUT_METHOD_SERVICE);
