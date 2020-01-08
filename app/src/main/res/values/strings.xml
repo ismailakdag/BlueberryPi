@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Blueberry Pi</string>
+    <string name="close_connection">Close Connection</string>
+    <string name="predicted_s31_value">Predicted S31 Value:</string>
 </resources>

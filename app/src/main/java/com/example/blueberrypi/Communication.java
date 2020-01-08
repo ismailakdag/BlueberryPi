@@ -7,10 +7,13 @@ import android.bluetooth.BluetoothAdapter;
 import android.bluetooth.BluetoothDevice;
 import android.bluetooth.BluetoothServerSocket;
 import android.bluetooth.BluetoothSocket;
+import android.content.Context;
 import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.view.View;
+import android.view.inputmethod.InputMethod;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.SeekBar;
@@ -99,6 +102,23 @@ public class Communication extends AppCompatActivity {
        }
    });
 
+   tbfreq.setOnFocusChangeListener(new View.OnFocusChangeListener() {
+       @Override
+       public void onFocusChange(View v, boolean hasFocus) {
+           if(!hasFocus){
+               hideKeyboard(v);
+           }
+       }
+   });
+
+tbvolt.setOnFocusChangeListener(new View.OnFocusChangeListener() {
+    @Override
+    public void onFocusChange(View v, boolean hasFocus) {
+        if(!hasFocus){
+            hideKeyboard(v);
+        }
+    }
+});
 
         changevolts.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override
@@ -145,8 +165,15 @@ public class Communication extends AppCompatActivity {
 
     }
 
-    private void sendvalues() {
 
+        private void sendvalues() {
+        if(tbfreq.getText().toString().matches("")){
+            Toast.makeText(getApplicationContext(),"You must enter valid Frequency value!",Toast.LENGTH_SHORT).show();
+        }
+        else if(tbvolt.getText().toString().matches("")){
+            Toast.makeText(getApplicationContext(),"You must enter valid Voltage value!",Toast.LENGTH_SHORT).show();
+        }
+        else{
         freqandvolt=tbfreq.getText().toString()+","+tbvolt.getText().toString()+","+String.valueOf(barvalue);
 
         if(btSocket!=null)
@@ -161,11 +188,16 @@ public class Communication extends AppCompatActivity {
                 s21text.setText(seperated[0]);
                 s31text.setText(seperated[1]);
                 errortext.setText(seperated[2]);
+                View view = this.getCurrentFocus();
+                if(view!=null) {
+                    InputMethodManager imm = (InputMethodManager)getSystemService(Context.INPUT_METHOD_SERVICE);
+                    imm.hideSoftInputFromWindow(view.getWindowToken(),0);
+                }
             } catch (IOException e) {
                 e.printStackTrace();
             }
         }
-    }
+    }}
 
     private void changevoltage() {
 
@@ -202,6 +234,11 @@ public class Communication extends AppCompatActivity {
     public void onBackPressed() {
         super.onBackPressed();
         Disconnect();
+    }
+
+    public void hideKeyboard(View view) {
+        InputMethodManager inputMethodManager =(InputMethodManager)getSystemService(this.INPUT_METHOD_SERVICE);
+        inputMethodManager.hideSoftInputFromWindow(view.getWindowToken(), 0);
     }
 
 
