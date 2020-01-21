@@ -174,7 +174,7 @@ tbvolt.setOnFocusChangeListener(new View.OnFocusChangeListener() {
             Toast.makeText(getApplicationContext(),"You must enter valid Voltage value!",Toast.LENGTH_SHORT).show();
         }
         else{
-        freqandvolt=tbfreq.getText().toString()+","+tbvolt.getText().toString()+","+String.valueOf(barvalue);
+        freqandvolt=tbfreq.getText().toString()+","+tbvolt.getText().toString();
 
         if(btSocket!=null)
         {
